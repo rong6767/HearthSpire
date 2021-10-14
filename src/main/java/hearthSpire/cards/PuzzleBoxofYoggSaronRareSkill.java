@@ -30,7 +30,7 @@ public class PuzzleBoxofYoggSaronRareSkill extends AbstractDynamicCard {
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.NONE;
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = CardColor.RED;
+    public static final CardColor COLOR = CardColor.COLORLESS;
 
     private static final int COST = 3;
 

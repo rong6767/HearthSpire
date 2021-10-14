@@ -61,5 +61,9 @@
   "hearthSpire:PuzzleBoxofYoggSaronRareSkill": {
     "NAME": "Puzzle Box of Yogg-Saron",
     "DESCRIPTION": "Cast !M! random cards. NL Exhaust"
+  },
+  "hearthSpire:DreadlordBiteCommonAttack": {
+    "NAME": "Dreadlord's Bite",
+    "DESCRIPTION": "Deal !D! Damage. NL hearthspire:Outcast. Deal !M! Damage to all enemies."
   }
 }
