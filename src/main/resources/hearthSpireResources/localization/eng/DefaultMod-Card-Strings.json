@@ -57,5 +57,9 @@
   "hearthSpire:HandofGuldanUncommonSkill": {
     "NAME": "Hand of Gul'dan",
     "DESCRIPTION": "When you play or discard this, draw !M! cards. "
+  },
+  "hearthSpire:PuzzleBoxofYoggSaronRareSkill": {
+    "NAME": "Puzzle Box of Yogg-Saron",
+    "DESCRIPTION": "Cast !M! random cards. NL Exhaust"
   }
 }

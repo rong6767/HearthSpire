@@ -27,7 +27,6 @@ public class HandofGuldanUncommonSkill extends AbstractDynamicCard {
 
     private static final int COST = 2;
 
-
     // /STAT DECLARATION/
 
 

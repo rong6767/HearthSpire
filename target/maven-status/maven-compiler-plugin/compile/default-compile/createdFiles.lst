@@ -17,11 +17,13 @@ hearthSpire\relics\PlaceholderRelic.class
 hearthSpire\cards\DefaultSecondMagicNumberSkill.class
 hearthSpire\util\TextureLoader.class
 hearthSpire\cards\DefaultRarePower.class
+hearthSpire\cards\PuzzleBoxofYoggSaronRareSkill.class
 hearthSpire\patches\DefaultInsertPatch.class
 hearthSpire\powers\CommonPower.class
 hearthSpire\variables\DefaultSecondMagicNumber.class
 hearthSpire\cards\DefaultUncommonSkill.class
 hearthSpire\variables\DefaultCustomVariable.class
+hearthSpire\actions\PlayRandomCardsAction.class
 hearthSpire\cards\OrbSkill.class
 hearthSpire\powers\RarePower.class
 hearthSpire\cards\AbstractDefaultCard.class
