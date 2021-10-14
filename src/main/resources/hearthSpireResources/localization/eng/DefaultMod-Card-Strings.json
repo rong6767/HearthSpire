@@ -52,6 +52,10 @@
   },
   "hearthSpire:SkullofIroncladRareSkill": {
     "NAME": "Skull of Ironclad",
-    "DESCRIPTION": "Draw !M! cards. hearthspire:Outcast. Reduce their cost by 2."
+    "DESCRIPTION": "Draw !M! cards. hearthspire:Outcast. Reduce their cost to 0."
+  },
+  "hearthSpire:HandofGuldanUncommonSkill": {
+    "NAME": "Hand of Gul'dan",
+    "DESCRIPTION": "When you play or discard this, draw !M! cards. "
   }
 }

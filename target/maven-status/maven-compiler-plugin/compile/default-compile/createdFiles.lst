@@ -1,5 +1,6 @@
 hearthSpire\relics\DefaultClickableRelic.class
 hearthSpire\potions\PlaceholderPotion.class
+hearthSpire\cards\HandofGuldanUncommonSkill.class
 hearthSpire\cards\DefaultRareSkill.class
 hearthSpire\patches\relics\BottledPlaceholderField$MakeStatEquivalentCopy.class
 hearthSpire\patches\relics\BottledPlaceholderField.class
@@ -19,7 +20,6 @@ hearthSpire\cards\DefaultRarePower.class
 hearthSpire\patches\DefaultInsertPatch.class
 hearthSpire\powers\CommonPower.class
 hearthSpire\variables\DefaultSecondMagicNumber.class
-hearthSpire\cards\OutcastAttackCommonAttack.class
 hearthSpire\cards\DefaultUncommonSkill.class
 hearthSpire\variables\DefaultCustomVariable.class
 hearthSpire\cards\OrbSkill.class

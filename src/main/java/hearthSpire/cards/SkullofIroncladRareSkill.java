@@ -1,14 +1,11 @@
 package hearthSpire.cards;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import hearthSpire.DefaultMod;
 import hearthSpire.actions.SkullFollowAction;
-import hearthSpire.characters.TheDefault;
 
 import static hearthSpire.DefaultMod.makeCardPath;
 
@@ -23,7 +20,7 @@ public class SkullofIroncladRareSkill extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(SkullofIroncladRareSkill.class.getSimpleName());
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String IMG = makeCardPath("SkullofGuldan.png");
 
     // /TEXT DECLARATION/
 
@@ -55,11 +52,11 @@ public class SkullofIroncladRareSkill extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         if(p.hand.getBottomCard().cardID.equals(ID) || p.hand.getTopCard().cardID.equals(ID)) {
             AbstractDungeon.actionManager.addToBottom(
-                    new DrawCardAction(DRAW, new SkullFollowAction()));
+                    new DrawCardAction(magicNumber, new SkullFollowAction()));
         }
         else{
             AbstractDungeon.actionManager.addToBottom(
-                    new DrawCardAction(p,DRAW));
+                    new DrawCardAction(p,magicNumber));
         }
     }
 
