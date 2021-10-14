@@ -1,0 +1,12 @@
+{
+  "modid": "HearthSpire",
+  "name": "Hearth Spire",
+  "author_list": ["Xin"],
+  "credits": "Basemod, ModTheSpire, #modding",
+  "description": "Hearthstone cards in Spire.",
+  "version": "0.0.1",
+  "sts_version": "01-23-2019",
+  "mts_version": "3.8.0",
+  "dependencies": ["basemod", "stslib"],
+  "update_json": ""
+}
