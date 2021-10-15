@@ -22,6 +22,7 @@ hearthSpire\cards\PuzzleBoxofYoggSaronRareSkill.class
 hearthSpire\patches\DefaultInsertPatch.class
 hearthSpire\powers\CommonPower.class
 hearthSpire\variables\DefaultSecondMagicNumber.class
+hearthSpire\cards\EviscerateCommonAttack.class
 hearthSpire\cards\DefaultUncommonSkill.class
 hearthSpire\variables\DefaultCustomVariable.class
 hearthSpire\actions\PlayRandomCardsAction.class

@@ -8,6 +8,12 @@
   },
   {
     "NAMES": [
+      "combo"
+    ],
+    "DESCRIPTION": "A bonus if you already played a card this turn."
+  },
+  {
+    "NAMES": [
       "keyword",
       "keywords"
     ],

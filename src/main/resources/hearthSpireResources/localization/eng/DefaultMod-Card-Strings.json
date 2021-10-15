@@ -65,5 +65,10 @@
   "hearthSpire:DreadlordBiteCommonAttack": {
     "NAME": "Dreadlord's Bite",
     "DESCRIPTION": "Deal !D! Damage. NL hearthspire:Outcast. Deal !M! Damage to all enemies."
+  },
+  "hearthSpire:EviscerateCommonAttack": {
+    "NAME": "Eviscerate",
+    "DESCRIPTION": "Deal !D! Damage. NL hearthspire:Combo: Deal !M! Damage instead."
   }
+
 }
