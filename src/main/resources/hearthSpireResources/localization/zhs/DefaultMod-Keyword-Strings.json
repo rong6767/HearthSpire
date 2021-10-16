@@ -1,0 +1,32 @@
+[
+  {
+    "NAMES": [
+      "流放"
+    ],
+    "DESCRIPTION": "如果这张牌是你手牌最左边或者最右边的卡牌，则触发额外效果."
+  },
+  {
+    "NAMES": [
+      "连击"
+    ],
+    "DESCRIPTION": "如果在本回合你已使用过其它牌, 他会产生额外效果."
+  },
+  {
+    "NAMES": [
+      "keyword",
+      "keywords"
+    ],
+    "DESCRIPTION": "Whenever you play a card, gain 1 dexterity this turn only."
+  },
+  {
+    "PROPER_NAME": "Multiword Keyword",
+    "NAMES": [
+      "Multiword Keyword",
+      "multiword_keyword",
+      "multiword_keywords",
+      "multikey",
+      "multikeyword"
+    ],
+    "DESCRIPTION": "Make sure the first element in the NAMES is the same as your PROPER_NAME. The rest is to match keywords like the single word keyword."
+  }
+]

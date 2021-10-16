@@ -39,9 +39,11 @@ public class PuzzleBoxofYoggSaronRareSkill extends AbstractDynamicCard {
 
     public PuzzleBoxofYoggSaronRareSkill() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        magicNumber = baseMagicNumber = 10;
+        magicNumber = baseMagicNumber = 5;
         exhaust = true;
     }
+
+
 
     // Actions the card should do.
     @Override

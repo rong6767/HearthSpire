@@ -2,7 +2,6 @@ package hearthSpire;
 
 import basemod.*;
 import basemod.eventUtil.AddEventParams;
-import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
@@ -17,25 +16,22 @@ import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
-import com.megacrit.cardcrawl.unlock.UnlockTracker;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import hearthSpire.cards.*;
+import hearthSpire.cards.AbstractDefaultCard;
 import hearthSpire.characters.TheDefault;
 import hearthSpire.events.IdentityCrisisEvent;
-import hearthSpire.potions.PlaceholderPotion;
-import hearthSpire.relics.BottledPlaceholderRelic;
-import hearthSpire.relics.DefaultClickableRelic;
-import hearthSpire.relics.PlaceholderRelic;
-import hearthSpire.relics.PlaceholderRelic2;
 import hearthSpire.util.IDCheckDontTouchPls;
 import hearthSpire.util.TextureLoader;
 import hearthSpire.variables.DefaultCustomVariable;
 import hearthSpire.variables.DefaultSecondMagicNumber;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.lang.reflect.Type;
 import java.nio.charset.StandardCharsets;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Properties;
 
 //TODO: DON'T MASS RENAME/REFACTOR
@@ -82,8 +78,8 @@ public class DefaultMod implements
 
     // Mod-settings settings. This is if you want an on/off savable button
     public static Properties theDefaultDefaultSettings = new Properties();
-    public static final String ENABLE_PLACEHOLDER_SETTINGS = "enablePlaceholder";
-    public static boolean enablePlaceholder = true; // The boolean we'll be setting on/off (true/false)
+    public static final String TRUE_RANDOMNESS = "enableTureRandom";
+    public static boolean enableRandom = true; // The boolean we'll be setting on/off (true/false)
 
     //This is for the in-game mod settings panel.
     private static final String MODNAME = "Hearth Spire";
@@ -216,12 +212,12 @@ public class DefaultMod implements
         logger.info("Adding mod settings");
         // This loads the mod settings.
         // The actual mod Button is added below in receivePostInitialize()
-        theDefaultDefaultSettings.setProperty(ENABLE_PLACEHOLDER_SETTINGS, "FALSE"); // This is the default setting. It's actually set...
+        theDefaultDefaultSettings.setProperty(TRUE_RANDOMNESS, "FALSE"); // This is the default setting. It's actually set...
         try {
             SpireConfig config = new SpireConfig("hearthSpire", "theDefaultConfig", theDefaultDefaultSettings); // ...right here
             // the "fileName" parameter is the name of the file MTS will create where it will save our setting.
             config.load(); // Load the setting and set the boolean to equal it
-            enablePlaceholder = config.getBool(ENABLE_PLACEHOLDER_SETTINGS);
+            enableRandom = config.getBool(TRUE_RANDOMNESS);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -311,18 +307,18 @@ public class DefaultMod implements
         ModPanel settingsPanel = new ModPanel();
         
         // Create the on/off button:
-        ModLabeledToggleButton enableNormalsButton = new ModLabeledToggleButton("This is the text which goes next to the checkbox.",
+        ModLabeledToggleButton enableNormalsButton = new ModLabeledToggleButton("Puzzle Box of Yogg is true random(From different classes).",
                 350.0f, 700.0f, Settings.CREAM_COLOR, FontHelper.charDescFont, // Position (trial and error it), color, font
-                enablePlaceholder, // Boolean it uses
+                enableRandom, // Boolean it uses
                 settingsPanel, // The mod panel in which this button will be in
                 (label) -> {}, // thing??????? idk
                 (button) -> { // The actual button:
-            
-            enablePlaceholder = button.enabled; // The boolean true/false will be whether the button is enabled or not
+
+                    enableRandom = button.enabled; // The boolean true/false will be whether the button is enabled or not
             try {
                 // And based on that boolean, set the settings and save them
-                SpireConfig config = new SpireConfig("defaultMod", "theDefaultConfig", theDefaultDefaultSettings);
-                config.setBool(ENABLE_PLACEHOLDER_SETTINGS, enablePlaceholder);
+                SpireConfig config = new SpireConfig("hearthSpire", "theDefaultConfig", theDefaultDefaultSettings);
+                config.setBool(TRUE_RANDOMNESS, enableRandom);
                 config.save();
             } catch (Exception e) {
                 e.printStackTrace();
@@ -452,12 +448,102 @@ public class DefaultMod implements
     
     
     // ================ LOAD THE TEXT ===================
+    private static void doStringOverrides(final Type stringType, final String jsonString) {
+
+        HashMap<Type, String> typeMaps = (HashMap<Type, String>) ReflectionHacks.getPrivateStatic(BaseMod.class, "typeMaps");
+        HashMap<Type, Type> typeTokens = (HashMap<Type, Type>)ReflectionHacks.getPrivateStatic(BaseMod.class, "typeTokens");
+		/*new HashMap<Type, String>();
+        typeMaps.put(CardStrings.class, "cards");
+        typeMaps.put(CharacterStrings.class, "characters");
+        typeMaps.put(CreditStrings.class, "credits");
+        typeMaps.put(EventStrings.class, "events");
+        typeMaps.put(KeywordStrings.class, "keywords");
+        typeMaps.put(MonsterStrings.class, "monsters");
+        typeMaps.put(PotionStrings.class, "potions");
+        typeMaps.put(PowerStrings.class, "powers");
+        typeMaps.put(RelicStrings.class, "relics");
+        typeMaps.put(ScoreBonusStrings.class, "scoreBonuses");
+        typeMaps.put(TutorialStrings.class, "tutorials");
+        typeMaps.put(UIStrings.class, "ui");
+		*/
+
+        final String typeMap = typeMaps.get(stringType);
+        final Type typeToken = typeTokens.get(stringType);
+        //final String modName = findCallingModName();
+        final Map localizationStrings = (Map)ReflectionHacks.getPrivateStatic(LocalizedStrings.class, typeMap);
+        final Map map = new HashMap((Map)BaseMod.gson.fromJson(jsonString, typeToken));
+        localizationStrings.putAll(map);
+        ReflectionHacks.setPrivateStaticFinal(LocalizedStrings.class, typeMap, localizationStrings);
+    }
+
+    private void editStringsByLang(String jsonPath) {
+
+
+
+        // RelicStrings
+        String relicStrings = Gdx.files.internal(jsonPath + "DefaultMod-Relic-Strings.json").readString(
+                String.valueOf(StandardCharsets.UTF_8));
+        BaseMod.loadCustomStrings(RelicStrings.class, relicStrings);
+
+        // CardStrings
+        String cardStrings = Gdx.files.internal(jsonPath + "DefaultMod-Card-Strings.json").readString(
+                String.valueOf(StandardCharsets.UTF_8));
+        BaseMod.loadCustomStrings(CardStrings.class, cardStrings);
+
+        // PowerStrings
+        String powerStrings = Gdx.files.internal(jsonPath + "DefaultMod-Power-Strings.json").readString(
+                String.valueOf(StandardCharsets.UTF_8));
+        BaseMod.loadCustomStrings(PowerStrings.class, powerStrings);
+
+        // EventStrings
+        String eventStrings = Gdx.files.internal(jsonPath + "DefaultMod-Event-Strings.json").readString(
+                String.valueOf(StandardCharsets.UTF_8));
+        BaseMod.loadCustomStrings(EventStrings.class, eventStrings);
+
+        // PotionStrings
+        String potionStrings = Gdx.files.internal(jsonPath + "DefaultMod-Potion-Strings.json").readString(
+                String.valueOf(StandardCharsets.UTF_8));
+        BaseMod.loadCustomStrings(PotionStrings.class, potionStrings);
+
+        // OrbStrings
+        String orbStrings = Gdx.files.internal(jsonPath + "DefaultMod-Orb-Strings.json").readString(
+                String.valueOf(StandardCharsets.UTF_8));
+        BaseMod.loadCustomStrings(OrbStrings.class, orbStrings);
+
+    }
     
     @Override
     public void receiveEditStrings() {
-        logger.info("You seeing this?");
-        logger.info("Beginning to edit strings for mod with ID: " + getModID());
-        
+        logger.info("begin editting strings");
+        String jsonPath =  getModID() +"Resources/localization/eng/";
+        editStringsByLang(jsonPath);
+        ///LocalizedStrings.class is a good reference
+        //spanish is busted right now, sorry
+		/*if (Settings.language.toString().equals("SPA")) {
+			logger.info("Spanish detected!");
+			jsonPath = "localization/spa/";
+			editStringsByLang(jsonPath);
+		}*/
+        if (Settings.language.toString().equals("RUS")) {
+            logger.info("Russian detected!");
+            jsonPath =  getModID() +"Resources/localization/rus/";
+            editStringsByLang(jsonPath);
+
+        } else if (Settings.language.toString().equals("KOR")) {
+            logger.info("Korean detected!");
+            jsonPath =  getModID() +"Resources/localization/kor/";
+            editStringsByLang(jsonPath);
+
+        } else if (Settings.language.toString().equals("ZHS")) {
+            logger.info("Chinese detected!");
+            jsonPath = getModID() + "Resources/localization/zhs/";
+            editStringsByLang(jsonPath);
+
+        }
+
+        logger.info("done editting strings");
+
+        /*
         // CardStrings
         BaseMod.loadCustomStringsFile(CardStrings.class,
                 getModID() + "Resources/localization/eng/DefaultMod-Card-Strings.json");
@@ -485,7 +571,7 @@ public class DefaultMod implements
         // OrbStrings
         BaseMod.loadCustomStringsFile(OrbStrings.class,
                 getModID() + "Resources/localization/eng/DefaultMod-Orb-Strings.json");
-        
+        */
         logger.info("Done edittting strings");
     }
     
@@ -502,15 +588,26 @@ public class DefaultMod implements
         // If you're using multiword keywords, the first element in your NAMES array in your keywords-strings.json has to be the same as the PROPER_NAME.
         // That is, in Card-Strings.json you would have #yA_Long_Keyword (#y highlights the keyword in yellow).
         // In Keyword-Strings.json you would have PROPER_NAME as A Long Keyword and the first element in NAMES be a long keyword, and the second element be a_long_keyword
-        
-        Gson gson = new Gson();
-        String json = Gdx.files.internal(getModID() + "Resources/localization/eng/DefaultMod-Keyword-Strings.json").readString(String.valueOf(StandardCharsets.UTF_8));
-        com.evacipated.cardcrawl.mod.stslib.Keyword[] keywords = gson.fromJson(json, com.evacipated.cardcrawl.mod.stslib.Keyword[].class);
-        
+        final Gson gson = new Gson();
+        String jsonPath =  getModID() +"Resources/localization/eng/";
+        if (Settings.language.toString().equals("RUS")) {
+            logger.info("Russian detected!");
+            jsonPath =  getModID() +"Resources/localization/rus/";
+        }
+        if (Settings.language.toString().equals("KOR")) {
+            logger.info("Korean detected!");
+            jsonPath = getModID() + "Resources/localization/kor/";
+        }
+        if (Settings.language.toString().equals("ZHS")) {
+            logger.info("ZHS detected!");
+            jsonPath =  getModID() +"Resources/localization/zhs/";
+        }
+        final String json = Gdx.files.internal(jsonPath + "DefaultMod-Keyword-Strings.json").readString(String.valueOf(StandardCharsets.UTF_8));
+        final Keyword[] keywords = (Keyword[])gson.fromJson(json, Keyword[].class);
         if (keywords != null) {
-            for (Keyword keyword : keywords) {
-                BaseMod.addKeyword(getModID().toLowerCase(), keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
-                //  getModID().toLowerCase() makes your keyword mod specific (it won't show up in other cards that use that word)
+            for (final Keyword keyword : keywords) {
+                logger.info("Adding Keyword - " + keyword.PROPER_NAME + " | " + keyword.NAMES[0]);
+                BaseMod.addKeyword(keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
             }
         }
     }
