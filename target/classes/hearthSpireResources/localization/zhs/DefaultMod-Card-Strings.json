@@ -1,0 +1,116 @@
+{
+  "hearthSpire:DefaultCommonAttack": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage. NL [#0000ff]This[] [#ff0000]Is[] [#ffff00]How[] [#88888]color[] [#ff00ff]works.[]"
+  },
+  "hearthSpire:DefaultCommonSkill": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block. NL hearthspire:Multiword_Keyword."
+  },
+  "hearthSpire:DefaultCommonPower": {
+    "NAME": "Hold Place",
+    "DESCRIPTION": "Gain !M! hearthspire:Keyword.",
+    "UPGRADE_DESCRIPTION": "Gain !M! hearthspire:Keywords."
+  },
+  "hearthSpire:DefaultUncommonAttack": {
+    "NAME": "Big slap",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "hearthSpire:DefaultUncommonSkill": {
+    "NAME": "A Better Defend",
+    "DESCRIPTION": "Gain !B! Plated Armor. Affected by Dexterity."
+  },
+  "hearthSpire:DefaultUncommonPower": {
+    "NAME": "Weirdness",
+    "DESCRIPTION": "Gain X hearthspire:Keywords.",
+    "UPGRADE_DESCRIPTION": "Gain X +1 hearthspire:Keywords."
+  },
+  "hearthSpire:DefaultRareAttack": {
+    "NAME": "TOUCH",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "hearthSpire:DefaultRareSkill": {
+    "NAME": "For Each Loop x2",
+    "DESCRIPTION": "Apply !M! Vulnerable to all enemies, 2 times.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable to all enemies, 3 times."
+  },
+  "hearthSpire:DefaultRarePower": {
+    "NAME": "In-Progress Form",
+    "DESCRIPTION": "At the start of your turn, play a TOUCH."
+  },
+  "hearthSpire:DefaultAttackWithVariable": {
+    "NAME": "Special Strike",
+    "DESCRIPTION": "Deal !D! damage [E] times. NL (Deal !hearthSpire:ENERGY_DAMAGE! damage total.)"
+  },
+  "hearthSpire:DefaultSecondMagicNumberSkill": {
+    "NAME": "Cool 2 Number Card",
+    "DESCRIPTION": "Apply !M! Vulnerable and !hearthSpire:SecondMagic! poison to an enemy."
+  },
+  "hearthSpire:OrbSkill": {
+    "NAME": "Get Orb",
+    "DESCRIPTION": "Channel 1 Default Orb."
+  },
+  "hearthSpire:SkullofIroncladRareSkill": {
+    "NAME": "古尔丹之颅",
+    "DESCRIPTION": "抽 !M! 张卡. 流放 . 这些牌的法力值降低到 0."
+  },
+  "hearthSpire:HandofGuldanUncommonSkill": {
+    "NAME": "古尔丹之手",
+    "DESCRIPTION": "当你使用或弃掉, 抽 !M! 张牌. "
+  },
+  "hearthSpire:PuzzleBoxofYoggSaronRareSkill": {
+    "NAME": "尤格萨隆的谜之匣",
+    "DESCRIPTION": "随即释放 !M! 张牌. NL 消耗 "
+  },
+  "hearthSpire:DreadlordBiteCommonAttack": {
+    "NAME": "恐惧魔王之咬",
+    "DESCRIPTION": "造成 !D! 点伤害. NL 流放 . 对所有敌人造成 !M! 点伤害."
+  },
+  "hearthSpire:EviscerateCommonAttack": {
+    "NAME": "刺骨",
+    "DESCRIPTION": "造成 !D! 点伤害. NL hearthspire:Combo: 改为造成 !M! 点伤害."
+  },
+  "hearthSpire:OverflowUncommonSkill": {
+    "NAME": "溢流",
+    "DESCRIPTION": "为所有角色回复 !M! 点生命. 抽 !M! 张牌."
+  },
+  "hearthSpire:FlamestrikeCommonAttack": {
+    "NAME": "烈焰风暴",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害."
+  },
+  "hearthSpire:RancorRareAttack": {
+    "NAME": "仇怨累积",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害. 获得等同于未被格挡的伤害的护甲."
+  },
+  "hearthSpire:SnackRunUncommonSkill": {
+    "NAME": "零食大冲关",
+    "DESCRIPTION": "发现一张牌. 为你的角色回复等同于其费用消耗 !M! 倍的生命. NL 消耗 ."
+  },
+  "hearthSpire:SoulFragmentCard": {
+    "NAME": "灵魂残片",
+    "DESCRIPTION": "不能被打出 . 抽到时释放, 回复 2 点生命."
+  },
+  "hearthSpire:SoulShearCommonAttack": {
+    "NAME": "灵魂剥离",
+    "DESCRIPTION": "对一个敌人造成 !D! 点伤害. 将 2 张灵魂残片洗入抽牌堆."
+  },
+  "hearthSpire:ShadowVisionsUncommonSkill": {
+    "NAME": "暗影视界",
+    "DESCRIPTION": "从抽牌堆中随机复制一张牌置入你的手牌中. NL 消耗 .",
+    "UPGRADE_DESCRIPTION": "从抽牌堆中随机复制一张升级后的牌置入你的手牌中. NL 消耗 ."
+  },
+  "hearthSpire:RenoJacksonUncommonSkill": {
+    "NAME": "雷诺·杰克逊",
+    "DESCRIPTION": "回复 4 点生命. 如果你的牌组没有相同的牌(除基础卡牌外), 回复额外的 !M! 点生命."
+  },
+  "hearthSpire:DinotamerBrannUncommonAttack": {
+    "NAME": "恐龙大师布莱恩",
+    "DESCRIPTION": "对一个敌人造成 !D! 点伤害. 如果你的牌组没有相同的牌(除基础卡牌外), 造成额外 !M! 点伤害."
+  },
+  "hearthSpire:InkmasterSoliaRareSkill": {
+    "NAME": "墨水大师索莉娅",
+    "DESCRIPTION": "如果你的牌组没有相同的牌(除基础卡牌外), 你的下 !M! 张牌耗能为0.",
+    "UPGRADE_DESCRIPTION": "如果你的牌组没有相同的牌(除基础卡牌外), 你的下 !M! 张牌耗能为0."
+  }
+
+}

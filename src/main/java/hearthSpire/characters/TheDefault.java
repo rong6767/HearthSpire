@@ -4,32 +4,28 @@ import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
-import com.badlogic.gdx.math.MathUtils;
-import com.esotericsoftware.spine.AnimationState;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.EnergyManager;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import hearthSpire.DefaultMod;
 import hearthSpire.cards.*;
 import hearthSpire.relics.DefaultClickableRelic;
 import hearthSpire.relics.PlaceholderRelic;
 import hearthSpire.relics.PlaceholderRelic2;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
 
-import static hearthSpire.DefaultMod.*;
+import static hearthSpire.DefaultMod.makeID;
 import static hearthSpire.characters.TheDefault.Enums.COLOR_GRAY;
 
 //Wiki-page https://github.com/daviscook477/BaseMod/wiki/Custom-Characters
@@ -107,7 +103,7 @@ public class TheDefault extends CustomPlayer {
 
 
         // =============== TEXTURES, ENERGY, LOADOUT =================  
-
+/*
         initializeClass(null, // required call to load textures and setup energy/loadout.
                 // I left these in DefaultMod.java (Ctrl+click them to see where they are, Ctrl+hover to see what they read.)
                 THE_DEFAULT_SHOULDER_2, // campfire pose
@@ -136,7 +132,7 @@ public class TheDefault extends CustomPlayer {
         dialogY = (drawY + 220.0F * Settings.scale); // you can just copy these values
 
         // =============== /TEXT BUBBLE LOCATION/ =================
-
+*/
     }
 
     // =============== /CHARACTER CLASS END/ =================

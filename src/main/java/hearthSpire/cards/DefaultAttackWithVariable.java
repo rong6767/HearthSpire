@@ -1,5 +1,6 @@
 package hearthSpire.cards;
 
+import basemod.AutoAdd;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -11,7 +12,7 @@ import hearthSpire.DefaultMod;
 import hearthSpire.characters.TheDefault;
 
 import static hearthSpire.DefaultMod.makeCardPath;
-
+@AutoAdd.Ignore
 public class DefaultAttackWithVariable extends AbstractDynamicCard {
 
     /*

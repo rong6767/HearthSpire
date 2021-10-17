@@ -30,6 +30,7 @@ hearthSpire\actions\ShadowVIsionsAction.class
 hearthSpire\powers\CommonPower.class
 hearthSpire\variables\DefaultSecondMagicNumber.class
 hearthSpire\cards\EviscerateCommonAttack.class
+hearthSpire\patches\AbstractCardPatch.class
 hearthSpire\cards\DefaultUncommonSkill.class
 hearthSpire\variables\DefaultCustomVariable.class
 hearthSpire\actions\PlayRandomCardsAction$1.class

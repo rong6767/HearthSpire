@@ -1,6 +1,5 @@
 package hearthSpire.powers;
 
-import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
@@ -15,10 +14,8 @@ import hearthSpire.util.TextureLoader;
 
 import static hearthSpire.DefaultMod.makePowerPath;
 
-//Gain 1 dex for the turn for each card played.
 
-public class FreeCardPower extends AbstractPower implements CloneablePowerInterface {
-    public AbstractCreature source;
+public class FreeCardPower extends AbstractPower {
 
     public static final String POWER_ID = DefaultMod.makeID("FreeCardPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
@@ -30,13 +27,12 @@ public class FreeCardPower extends AbstractPower implements CloneablePowerInterf
     private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("Inkmaster_power84.png"));
     private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("Inkmaster_power32.png"));
 
-    public FreeCardPower(final AbstractCreature owner, final AbstractCreature source, final int amount) {
+    public FreeCardPower(final AbstractCreature owner, final int amount) {
         name = NAME;
         ID = POWER_ID;
 
         this.owner = owner;
         this.amount = amount;
-        this.source = source;
 
         type = PowerType.BUFF;
         isTurnBased = false;
@@ -50,15 +46,17 @@ public class FreeCardPower extends AbstractPower implements CloneablePowerInterf
 
     // On use card, apply (amount) of Dexterity. (Go to the actual power card for the amount.)
     @Override
-    public void onUseCard(final AbstractCard card, final UseCardAction action) {
+    public void onUseCard(AbstractCard card, UseCardAction action) {
         if ( !card.purgeOnUse && this.amount > 0) {
             this.flash();
             --this.amount;
             if (this.amount == 0) {
-                this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, "FreeCardPower"));
+                this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
             }
         }
     }
+
+
 
 
     // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
@@ -71,8 +69,4 @@ public class FreeCardPower extends AbstractPower implements CloneablePowerInterf
         }
     }
 
-    @Override
-    public AbstractPower makeCopy() {
-        return new CommonPower(owner, source, amount);
-    }
 }

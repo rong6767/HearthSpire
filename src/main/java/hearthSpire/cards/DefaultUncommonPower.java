@@ -1,5 +1,6 @@
 package hearthSpire.cards;
 
+import basemod.AutoAdd;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -11,7 +12,7 @@ import hearthSpire.actions.UncommonPowerAction;
 import hearthSpire.characters.TheDefault;
 
 import static hearthSpire.DefaultMod.makeCardPath;
-
+@AutoAdd.Ignore
 public class DefaultUncommonPower extends AbstractDynamicCard {
 
     /*

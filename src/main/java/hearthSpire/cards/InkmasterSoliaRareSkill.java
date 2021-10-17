@@ -5,8 +5,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.watcher.FreeAttackPower;
 import hearthSpire.DefaultMod;
+import hearthSpire.powers.FreeCardPower;
 
 import static hearthSpire.DefaultMod.makeCardPath;
 
@@ -43,7 +43,7 @@ public class InkmasterSoliaRareSkill extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if(p.masterDeck.highlanderCheck()) {
-            this.addToBot(new ApplyPowerAction(p, p, new FreeAttackPower(p, 1), magicNumber));
+            this.addToBot(new ApplyPowerAction(p, p, new FreeCardPower(p, magicNumber), 1));
         }else {
 
         }

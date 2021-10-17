@@ -6,5 +6,9 @@
 "hearthSpire:RarePower": {
         "NAME": "Placeholder Power",
         "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
+},
+"hearthSpire:FreeCardPower": {
+"NAME": "Free Card Power",
+"DESCRIPTIONS": ["Your next #b", " card costs 0." , " cards cost 0."]
 }
 }
