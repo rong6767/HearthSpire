@@ -11,7 +11,6 @@ import hearthSpire.characters.TheDefault;
 import hearthSpire.orbs.DefaultOrb;
 
 import static hearthSpire.DefaultMod.makeCardPath;
-
 public class OrbSkill extends AbstractDynamicCard {
 
     /*

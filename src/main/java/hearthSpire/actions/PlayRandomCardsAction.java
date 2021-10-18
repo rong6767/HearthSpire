@@ -12,12 +12,12 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
-import com.megacrit.cardcrawl.helpers.ModHelper;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Map;
+import java.util.Random;
 
 public class PlayRandomCardsAction extends AbstractGameAction {
     private boolean exhaustCards;
@@ -36,7 +36,7 @@ public class PlayRandomCardsAction extends AbstractGameAction {
         this.exhaustCards = exhausts;
         this.times = times;
     }
-
+/*
     public static void initializeCardPools() {
         long startTime = System.currentTimeMillis();
         ArrayList<AbstractCard> tmpPool = new ArrayList();
@@ -105,9 +105,39 @@ public class PlayRandomCardsAction extends AbstractGameAction {
             divCommonCardPool.addToBottom(c);
         }
     }
+*/
+    private AbstractCard.CardRarity randomRarity() {
+        int pick = new Random().nextInt(5);
+        return AbstractCard.CardRarity.values()[pick];
+    }
 
-    public static AbstractCard returnTrulyDiverseRandomCardInCombat() {
-        ArrayList<AbstractCard> list = new ArrayList();
+    public static AbstractCard getAnyColorCard(AbstractCard.CardRarity rarity) {
+        CardGroup anyCard = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+        Iterator var2 = CardLibrary.cards.entrySet().iterator();
+
+        while(true) {
+            Map.Entry c;
+            do {
+                do {
+                    do {
+                        do {
+                            if (!var2.hasNext()) {
+                                anyCard.shuffle(AbstractDungeon.cardRng);
+                                return anyCard.getRandomCard(true, rarity).makeCopy();
+                            }
+
+                            c = (Map.Entry)var2.next();
+                        } while(((AbstractCard)c.getValue()).rarity != rarity);
+                    } while(((AbstractCard)c.getValue()).type == AbstractCard.CardType.CURSE);
+                } while(((AbstractCard)c.getValue()).type == AbstractCard.CardType.STATUS);
+            } while(UnlockTracker.isCardLocked((String)c.getKey()) && !Settings.treatEverythingAsUnlocked());
+
+            anyCard.addToBottom((AbstractCard)c.getValue());
+        }
+    }
+
+    public AbstractCard returnTrulyDiverseRandomCardInCombat() {
+        /*ArrayList<AbstractCard> list = new ArrayList();
         initializeCardPools();
         Iterator var1 = divCommonCardPool.group.iterator();
 
@@ -140,7 +170,8 @@ public class PlayRandomCardsAction extends AbstractGameAction {
             }
         }
 
-        return (AbstractCard)list.get(AbstractDungeon.cardRandomRng.random(list.size() - 1));
+        return (AbstractCard)list.get(AbstractDungeon.cardRandomRng.random(list.size() - 1));*/
+        return  getAnyColorCard(randomRarity());
     }
 
     

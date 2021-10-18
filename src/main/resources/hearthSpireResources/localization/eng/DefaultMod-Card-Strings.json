@@ -72,7 +72,7 @@
   },
   "hearthSpire:OverflowUncommonSkill": {
     "NAME": "Overflow",
-    "DESCRIPTION": "Restore !M! health to all characters. Draw !M! cards."
+    "DESCRIPTION": "Restore !M! health to all characters. Draw !M! cards. NL Exhaust."
   },
   "hearthSpire:FlamestrikeCommonAttack": {
     "NAME": "Flamestrike",
@@ -90,7 +90,7 @@
     "NAME": "Soul Fragment",
     "DESCRIPTION": "Unplayable. Cast when drawn, restore 2 health."
   },
-  "hearthSpire:SoulShearCommonAttack": {
+  "hearthSpire:SoulShearUncommonAttack": {
     "NAME": "Soul Shear",
     "DESCRIPTION": "Deal !D! damage to an enemy. Shuffle 2 Soul Fragments into you draw pile"
   },
@@ -111,6 +111,11 @@
     "NAME": "Inkmaster Solia",
     "DESCRIPTION": "If your deck has no duplicates (except basic cards), your next !M! card cost 0.",
     "UPGRADE_DESCRIPTION": "If your deck has no duplicates (except basic cards), your next !M! cards cost 0."
+  },
+  "hearthSpire:PickPocketUncommonSkill": {
+    "NAME": "Pick Pocket",
+    "DESCRIPTION": "Ethereal. Add a random card to your hand. Add a Pick Pocket to your hand. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Ethereal. Add a upgraded random card to your hand. Add a Pick Pocket to your hand. Exhaust."
   }
 
 }

@@ -22,7 +22,7 @@ public class FlamestrikeCommonAttack extends AbstractDynamicCard{
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = CardColor.BLUE;
 
-    private static final int COST = 3;
+    private static final int COST = 2;
 
 
 
@@ -41,7 +41,7 @@ public class FlamestrikeCommonAttack extends AbstractDynamicCard{
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeBaseCost(2);
+            this.upgradeDamage(8);
         }
 
     }

@@ -25,6 +25,7 @@ hearthSpire\util\TextureLoader.class
 hearthSpire\cards\DefaultRarePower.class
 hearthSpire\cards\PuzzleBoxofYoggSaronRareSkill.class
 hearthSpire\cards\FlamestrikeCommonAttack.class
+hearthSpire\cards\SoulShearUncommonAttack.class
 hearthSpire\patches\DefaultInsertPatch.class
 hearthSpire\actions\ShadowVIsionsAction.class
 hearthSpire\powers\CommonPower.class
@@ -33,7 +34,7 @@ hearthSpire\cards\EviscerateCommonAttack.class
 hearthSpire\patches\AbstractCardPatch.class
 hearthSpire\cards\DefaultUncommonSkill.class
 hearthSpire\variables\DefaultCustomVariable.class
-hearthSpire\actions\PlayRandomCardsAction$1.class
+hearthSpire\cards\PickPocketUncommonSkill.class
 hearthSpire\cards\RancorRareAttack.class
 hearthSpire\actions\PlayRandomCardsAction.class
 hearthSpire\cards\OrbSkill.class
@@ -52,7 +53,6 @@ hearthSpire\cards\InkmasterSoliaRareSkill.class
 hearthSpire\cards\OverflowUncommonSkill.class
 hearthSpire\cards\SnackRunUncommonSkill.class
 hearthSpire\cards\DefaultAttackWithVariable.class
-hearthSpire\cards\SoulShearCommonAttack.class
 hearthSpire\cards\SoulFragmentCard.class
 hearthSpire\cards\SkullofIroncladRareSkill.class
 hearthSpire\cards\AbstractDynamicCard.class

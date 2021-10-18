@@ -32,6 +32,7 @@ public class OverflowUncommonSkill extends AbstractDynamicCard {
     public OverflowUncommonSkill() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber =5;
+        this.exhaust = true;
     }
 
     // Actions the card should do.

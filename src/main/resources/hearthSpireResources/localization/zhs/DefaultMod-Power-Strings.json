@@ -6,5 +6,9 @@
 "hearthSpire:RarePower": {
         "NAME": "Placeholder Power",
         "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
-}
+},
+  "hearthSpire:FreeCardPower": {
+    "NAME": "免费卡牌",
+    "DESCRIPTIONS": ["你接下来的 #b", " 张卡牌消耗为 0." , " 张卡牌消耗为 0."]
+  }
 }

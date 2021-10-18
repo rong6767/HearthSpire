@@ -16,6 +16,7 @@ C:\Users\dean\Desktop\mods\StS-DefaultModBase-master\hearthSpire\src\main\java\h
 C:\Users\dean\Desktop\mods\StS-DefaultModBase-master\hearthSpire\src\main\java\hearthSpire\cards\SoulFragmentCard.java
 C:\Users\dean\Desktop\mods\StS-DefaultModBase-master\hearthSpire\src\main\java\hearthSpire\actions\ShadowVIsionsAction.java
 C:\Users\dean\Desktop\mods\StS-DefaultModBase-master\hearthSpire\src\main\java\hearthSpire\cards\InkmasterSoliaRareSkill.java
+C:\Users\dean\Desktop\mods\StS-DefaultModBase-master\hearthSpire\src\main\java\hearthSpire\cards\PickPocketUncommonSkill.java
 C:\Users\dean\Desktop\mods\StS-DefaultModBase-master\hearthSpire\src\main\java\hearthSpire\cards\PuzzleBoxofYoggSaronRareSkill.java
 C:\Users\dean\Desktop\mods\StS-DefaultModBase-master\hearthSpire\src\main\java\hearthSpire\orbs\DefaultOrb.java
 C:\Users\dean\Desktop\mods\StS-DefaultModBase-master\hearthSpire\src\main\java\hearthSpire\powers\CommonPower.java
@@ -26,6 +27,7 @@ C:\Users\dean\Desktop\mods\StS-DefaultModBase-master\hearthSpire\src\main\java\h
 C:\Users\dean\Desktop\mods\StS-DefaultModBase-master\hearthSpire\src\main\java\hearthSpire\actions\HealAllAction.java
 C:\Users\dean\Desktop\mods\StS-DefaultModBase-master\hearthSpire\src\main\java\hearthSpire\cards\SnackRunUncommonSkill.java
 C:\Users\dean\Desktop\mods\StS-DefaultModBase-master\hearthSpire\src\main\java\hearthSpire\cards\EviscerateCommonAttack.java
+C:\Users\dean\Desktop\mods\StS-DefaultModBase-master\hearthSpire\src\main\java\hearthSpire\cards\SoulShearUncommonAttack.java
 C:\Users\dean\Desktop\mods\StS-DefaultModBase-master\hearthSpire\src\main\java\hearthSpire\events\IdentityCrisisEvent.java
 C:\Users\dean\Desktop\mods\StS-DefaultModBase-master\hearthSpire\src\main\java\hearthSpire\cards\DefaultCommonSkill.java
 C:\Users\dean\Desktop\mods\StS-DefaultModBase-master\hearthSpire\src\main\java\hearthSpire\actions\DestoryFragmentAction.java
@@ -49,9 +51,9 @@ C:\Users\dean\Desktop\mods\StS-DefaultModBase-master\hearthSpire\src\main\java\h
 C:\Users\dean\Desktop\mods\StS-DefaultModBase-master\hearthSpire\src\main\java\hearthSpire\util\IDCheckDontTouchPls.java
 C:\Users\dean\Desktop\mods\StS-DefaultModBase-master\hearthSpire\src\main\java\hearthSpire\relics\PlaceholderRelic.java
 C:\Users\dean\Desktop\mods\StS-DefaultModBase-master\hearthSpire\src\main\java\hearthSpire\util\TextureLoader.java
-C:\Users\dean\Desktop\mods\StS-DefaultModBase-master\hearthSpire\src\main\java\hearthSpire\cards\SoulShearCommonAttack.java
 C:\Users\dean\Desktop\mods\StS-DefaultModBase-master\hearthSpire\src\main\java\hearthSpire\variables\DefaultCustomVariable.java
 C:\Users\dean\Desktop\mods\StS-DefaultModBase-master\hearthSpire\src\main\java\hearthSpire\cards\HandofGuldanUncommonSkill.java
 C:\Users\dean\Desktop\mods\StS-DefaultModBase-master\hearthSpire\src\main\java\hearthSpire\cards\AbstractDefaultCard.java
 C:\Users\dean\Desktop\mods\StS-DefaultModBase-master\hearthSpire\src\main\java\hearthSpire\cards\OverflowUncommonSkill.java
+C:\Users\dean\Desktop\mods\StS-DefaultModBase-master\hearthSpire\src\main\java\hearthSpire\patches\AbstractCardPatch.java
 C:\Users\dean\Desktop\mods\StS-DefaultModBase-master\hearthSpire\src\main\java\hearthSpire\actions\PlayRandomCardsAction.java

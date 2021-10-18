@@ -68,11 +68,11 @@
   },
   "hearthSpire:EviscerateCommonAttack": {
     "NAME": "刺骨",
-    "DESCRIPTION": "造成 !D! 点伤害. NL hearthspire:Combo: 改为造成 !M! 点伤害."
+    "DESCRIPTION": "造成 !D! 点伤害. NL 连击 改为造成 !M! 点伤害."
   },
   "hearthSpire:OverflowUncommonSkill": {
     "NAME": "溢流",
-    "DESCRIPTION": "为所有角色回复 !M! 点生命. 抽 !M! 张牌."
+    "DESCRIPTION": "为所有角色回复 !M! 点生命. 抽 !M! 张牌. NL 消耗 ."
   },
   "hearthSpire:FlamestrikeCommonAttack": {
     "NAME": "烈焰风暴",
@@ -90,7 +90,7 @@
     "NAME": "灵魂残片",
     "DESCRIPTION": "不能被打出 . 抽到时释放, 回复 2 点生命."
   },
-  "hearthSpire:SoulShearCommonAttack": {
+  "hearthSpire:SoulShearUncommonAttack": {
     "NAME": "灵魂剥离",
     "DESCRIPTION": "对一个敌人造成 !D! 点伤害. 将 2 张灵魂残片洗入抽牌堆."
   },
@@ -111,6 +111,11 @@
     "NAME": "墨水大师索莉娅",
     "DESCRIPTION": "如果你的牌组没有相同的牌(除基础卡牌外), 你的下 !M! 张牌耗能为0.",
     "UPGRADE_DESCRIPTION": "如果你的牌组没有相同的牌(除基础卡牌外), 你的下 !M! 张牌耗能为0."
+  },
+  "hearthSpire:PickPocketUncommonSkill": {
+    "NAME": "搜索",
+    "DESCRIPTION": " 虚无 . 将一张随机卡牌和搜索置入你的手牌。 消耗 .",
+    "UPGRADE_DESCRIPTION": " 虚无 . 将一张升级后的随机卡牌和搜索置入你的手牌。 消耗 ."
   }
 
 }
