@@ -53,6 +53,7 @@ public class PickPocketUncommonSkill extends AbstractDynamicCard {
     public static AbstractCard getAnyColorCard(AbstractCard.CardRarity rarity) {
         CardGroup anyCard = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         Iterator var2 = CardLibrary.cards.entrySet().iterator();
+        CardColor color = AbstractDungeon.player.getCardColor();
 
         while(true) {
             Map.Entry c;
@@ -60,12 +61,14 @@ public class PickPocketUncommonSkill extends AbstractDynamicCard {
                 do {
                     do {
                         do {
-                            if (!var2.hasNext()) {
-                                anyCard.shuffle(AbstractDungeon.cardRng);
-                                return anyCard.getRandomCard(true, rarity).makeCopy();
-                            }
+                            do {
+                                if (!var2.hasNext()) {
+                                    anyCard.shuffle(AbstractDungeon.cardRng);
+                                    return anyCard.getRandomCard(true, rarity).makeCopy();
+                                }
 
-                            c = (Map.Entry)var2.next();
+                                c = (Map.Entry) var2.next();
+                            } while(((AbstractCard)c.getValue()).color == color);
                         } while(((AbstractCard)c.getValue()).rarity != rarity);
                     } while(((AbstractCard)c.getValue()).type == AbstractCard.CardType.CURSE);
                 } while(((AbstractCard)c.getValue()).type == AbstractCard.CardType.STATUS);
@@ -82,15 +85,19 @@ public class PickPocketUncommonSkill extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractCard c = returnTrulyDiverseRandomCardInCombat().makeCopy();
+        AbstractCard c1 = returnTrulyDiverseRandomCardInCombat().makeCopy();
+        AbstractCard c2 = returnTrulyDiverseRandomCardInCombat().makeCopy();
 
         if (this.upgraded) {
-            c.upgrade();
-            this.addToBot(new MakeTempCardInHandAction(c, 1));
+            c1.upgrade();
+            c2.upgrade();
+            this.addToBot(new MakeTempCardInHandAction(c1, 1));
+            this.addToBot(new MakeTempCardInHandAction(c2, 1));
             this.addToBot(new MakeTempCardInHandAction(this, 1));
         }
         else {
-            this.addToBot(new MakeTempCardInHandAction(c, 1));
+            this.addToBot(new MakeTempCardInHandAction(c1, 1));
+            this.addToBot(new MakeTempCardInHandAction(c2, 1));
             this.addToBot(new MakeTempCardInHandAction(this, 1));
         }
 

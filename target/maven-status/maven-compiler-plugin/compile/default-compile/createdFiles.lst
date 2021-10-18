@@ -22,6 +22,7 @@ hearthSpire\relics\PlaceholderRelic.class
 hearthSpire\actions\BlockDamageAllEnemiesAction.class
 hearthSpire\cards\DefaultSecondMagicNumberSkill.class
 hearthSpire\util\TextureLoader.class
+hearthSpire\cards\DragonsHoardRareSkill.class
 hearthSpire\cards\DefaultRarePower.class
 hearthSpire\cards\PuzzleBoxofYoggSaronRareSkill.class
 hearthSpire\cards\FlamestrikeCommonAttack.class
@@ -32,13 +33,16 @@ hearthSpire\powers\CommonPower.class
 hearthSpire\variables\DefaultSecondMagicNumber.class
 hearthSpire\cards\EviscerateCommonAttack.class
 hearthSpire\patches\AbstractCardPatch.class
+hearthSpire\actions\ReduceCostFromOtherClassAction.class
 hearthSpire\cards\DefaultUncommonSkill.class
 hearthSpire\variables\DefaultCustomVariable.class
 hearthSpire\cards\PickPocketUncommonSkill.class
 hearthSpire\cards\RancorRareAttack.class
 hearthSpire\actions\PlayRandomCardsAction.class
 hearthSpire\cards\OrbSkill.class
+hearthSpire\actions\DragonsHoardAction.class
 hearthSpire\actions\HealAllAction.class
+hearthSpire\cards\BackfireUncommonSkill.class
 hearthSpire\powers\RarePower.class
 hearthSpire\cards\AbstractDefaultCard.class
 hearthSpire\characters\TheDefault$Enums.class
@@ -57,6 +61,7 @@ hearthSpire\cards\SoulFragmentCard.class
 hearthSpire\cards\SkullofIroncladRareSkill.class
 hearthSpire\cards\AbstractDynamicCard.class
 hearthSpire\actions\BetterHealDrawPileToHandAction.class
+hearthSpire\cards\EtherealPeddlerUncommonSkill.class
 hearthSpire\orbs\DefaultOrb.class
 hearthSpire\patches\DefaultInsertPatch$Locator.class
 hearthSpire\relics\PlaceholderRelic2.class

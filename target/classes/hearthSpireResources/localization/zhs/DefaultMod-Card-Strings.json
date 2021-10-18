@@ -114,8 +114,22 @@
   },
   "hearthSpire:PickPocketUncommonSkill": {
     "NAME": "搜索",
-    "DESCRIPTION": " 虚无 . 将一张随机卡牌和搜索置入你的手牌。 消耗 .",
-    "UPGRADE_DESCRIPTION": " 虚无 . 将一张升级后的随机卡牌和搜索置入你的手牌。 消耗 ."
+    "DESCRIPTION": " 虚无 . 将 2 张随机卡牌和搜索置入你的手牌。 消耗 .",
+    "UPGRADE_DESCRIPTION": " 虚无 . 将 2 张升级后的随机卡牌和搜索置入你的手牌。 消耗 ."
+  },
+  "hearthSpire:EtherealPeddlerUncommonSkill": {
+    "NAME": "Ethereal Peddler",
+    "DESCRIPTION": "如果你的手牌中有另一职业的卡牌，则其消耗减少 2 点。"
+  },
+  "hearthSpire:DragonsHoardRareSkill": {
+    "NAME": "巨龙宝藏",
+    "DESCRIPTION": "选择一张任意颜色的稀有牌置入你的手中. 消耗 .",
+    "UPGRADE_DESCRIPTION": "选择一张任意颜色的升级后的稀有牌置入你的手中. 消耗 ."
+  },
+  "hearthSpire:BackfireUncommonSkill": {
+    "NAME": "赛车回火",
+    "DESCRIPTION": "对自己造成3点伤害，抽 !M! 张牌."
   }
+
 
 }

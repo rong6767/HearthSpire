@@ -114,8 +114,21 @@
   },
   "hearthSpire:PickPocketUncommonSkill": {
     "NAME": "Pick Pocket",
-    "DESCRIPTION": "Ethereal. Add a random card to your hand. Add a Pick Pocket to your hand. Exhaust.",
-    "UPGRADE_DESCRIPTION": "Ethereal. Add a upgraded random card to your hand. Add a Pick Pocket to your hand. Exhaust."
+    "DESCRIPTION": "Ethereal. Add 2 random cards to your hand. Add a Pick Pocket to your hand. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Ethereal. Add 2 upgraded random cards to your hand. Add a Pick Pocket to your hand. Exhaust."
+  },
+  "hearthSpire:EtherealPeddlerUncommonSkill": {
+    "NAME": "Ethereal Peddler",
+    "DESCRIPTION": "If you're holding any cards from another class, reduce their Cost by 2."
+  },
+  "hearthSpire:DragonsHoardRareSkill": {
+    "NAME": "Dragon's Hoard",
+    "DESCRIPTION": "Choose 1 of 3 Rare cards of any color to add into your hand. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose 1 of 3 upgraded Rare cards of any color to add into your hand. Exhaust."
+  },
+  "hearthSpire:BackfireUncommonSkill": {
+    "NAME": "Backfire",
+    "DESCRIPTION": "Deal 3 damage to yourself, draw !M! cards."
   }
 
 }
