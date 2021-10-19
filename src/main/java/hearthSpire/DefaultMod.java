@@ -590,13 +590,17 @@ public class DefaultMod implements
         // In Keyword-Strings.json you would have PROPER_NAME as A Long Keyword and the first element in NAMES be a long keyword, and the second element be a_long_keyword
         final Gson gson = new Gson();
         String jsonPath =  getModID() +"Resources/localization/eng/";
+        if (Settings.language.toString().equals("ENG")) {
+            logger.info("Russian detected!");
+            jsonPath =  getModID() +"Resources/localization/eng/";
+        }
         if (Settings.language.toString().equals("RUS")) {
             logger.info("Russian detected!");
-            jsonPath =  getModID() +"Resources/localization/rus/";
+            jsonPath =  getModID() +"Resources/localization/eng/";
         }
         if (Settings.language.toString().equals("KOR")) {
             logger.info("Korean detected!");
-            jsonPath = getModID() + "Resources/localization/kor/";
+            jsonPath = getModID() + "Resources/localization/eng/";
         }
         if (Settings.language.toString().equals("ZHS")) {
             logger.info("ZHS detected!");

@@ -114,11 +114,11 @@
   },
   "hearthSpire:PickPocketUncommonSkill": {
     "NAME": "搜索",
-    "DESCRIPTION": " 虚无 . 将 2 张随机卡牌和搜索置入你的手牌。 消耗 .",
-    "UPGRADE_DESCRIPTION": " 虚无 . 将 2 张升级后的随机卡牌和搜索置入你的手牌。 消耗 ."
+    "DESCRIPTION": " 虚无 . 将 2 张其他颜色的卡牌和搜索置入你的手牌。 消耗 .",
+    "UPGRADE_DESCRIPTION": " 虚无 . 将 2 张升级后的其他颜色卡牌和搜索置入你的手牌。 消耗 ."
   },
   "hearthSpire:EtherealPeddlerUncommonSkill": {
-    "NAME": "Ethereal Peddler",
+    "NAME": "虚灵商人",
     "DESCRIPTION": "如果你的手牌中有另一职业的卡牌，则其消耗减少 2 点。"
   },
   "hearthSpire:DragonsHoardRareSkill": {
@@ -129,6 +129,10 @@
   "hearthSpire:BackfireUncommonSkill": {
     "NAME": "赛车回火",
     "DESCRIPTION": "对自己造成3点伤害，抽 !M! 张牌."
+  },
+  "hearthSpire:AcademicEspionageUncommonSkill": {
+    "NAME": "学术剽窃",
+    "DESCRIPTION": "将十张其他颜色的卡牌洗入你的牌库, 其消耗为 1 点. NL 消耗 ."
   }
 
 

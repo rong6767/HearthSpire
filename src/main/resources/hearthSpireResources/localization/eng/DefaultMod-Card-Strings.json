@@ -52,7 +52,7 @@
   },
   "hearthSpire:SkullofIroncladRareSkill": {
     "NAME": "Skull of Ironclad",
-    "DESCRIPTION": "Draw !M! cards. hearthspire:Outcast. Reduce their cost to 0."
+    "DESCRIPTION": "Draw !M! cards. Outcast . Reduce their cost to 0."
   },
   "hearthSpire:HandofGuldanUncommonSkill": {
     "NAME": "Hand of Gul'dan",
@@ -64,11 +64,11 @@
   },
   "hearthSpire:DreadlordBiteCommonAttack": {
     "NAME": "Dreadlord's Bite",
-    "DESCRIPTION": "Deal !D! damage. NL hearthspire:Outcast. Deal !M! damage to all enemies."
+    "DESCRIPTION": "Deal !D! damage. NL Outcast . Deal !M! damage to all enemies."
   },
   "hearthSpire:EviscerateCommonAttack": {
     "NAME": "Eviscerate",
-    "DESCRIPTION": "Deal !D! damage. NL hearthspire:Combo: Deal !M! damage instead."
+    "DESCRIPTION": "Deal !D! damage. NL Combo Deal !M! damage instead."
   },
   "hearthSpire:OverflowUncommonSkill": {
     "NAME": "Overflow",
@@ -114,8 +114,8 @@
   },
   "hearthSpire:PickPocketUncommonSkill": {
     "NAME": "Pick Pocket",
-    "DESCRIPTION": "Ethereal. Add 2 random cards to your hand. Add a Pick Pocket to your hand. Exhaust.",
-    "UPGRADE_DESCRIPTION": "Ethereal. Add 2 upgraded random cards to your hand. Add a Pick Pocket to your hand. Exhaust."
+    "DESCRIPTION": "Ethereal. Add 2 random cards of other colors to your hand. Add a Pick Pocket to your hand. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Ethereal. Add 2 upgraded random cards of other colors to your hand. Add a Pick Pocket to your hand. Exhaust."
   },
   "hearthSpire:EtherealPeddlerUncommonSkill": {
     "NAME": "Ethereal Peddler",
@@ -129,6 +129,10 @@
   "hearthSpire:BackfireUncommonSkill": {
     "NAME": "Backfire",
     "DESCRIPTION": "Deal 3 damage to yourself, draw !M! cards."
+  },
+  "hearthSpire:AcademicEspionageUncommonSkill": {
+    "NAME": "Academic Espionage",
+    "DESCRIPTION": "Shuffle 10 cards of other colors into your draw pile. They cost 1. Exhaust."
   }
 
 }
