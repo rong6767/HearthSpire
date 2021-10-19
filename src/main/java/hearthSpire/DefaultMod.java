@@ -1,7 +1,6 @@
 package hearthSpire;
 
 import basemod.*;
-import basemod.eventUtil.AddEventParams;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
@@ -12,13 +11,10 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
 import hearthSpire.cards.AbstractDefaultCard;
-import hearthSpire.characters.TheDefault;
-import hearthSpire.events.IdentityCrisisEvent;
 import hearthSpire.util.IDCheckDontTouchPls;
 import hearthSpire.util.TextureLoader;
 import hearthSpire.variables.DefaultCustomVariable;
@@ -198,14 +194,14 @@ public class DefaultMod implements
         
         logger.info("Done subscribing");
         
-        logger.info("Creating the color " + TheDefault.Enums.COLOR_GRAY.toString());
-        
+        //logger.info("Creating the color " + TheDefault.Enums.COLOR_GRAY.toString());
+        /*
         BaseMod.addColor(TheDefault.Enums.COLOR_GRAY, DEFAULT_GRAY, DEFAULT_GRAY, DEFAULT_GRAY,
                 DEFAULT_GRAY, DEFAULT_GRAY, DEFAULT_GRAY, DEFAULT_GRAY,
                 ATTACK_DEFAULT_GRAY, SKILL_DEFAULT_GRAY, POWER_DEFAULT_GRAY, ENERGY_ORB_DEFAULT_GRAY,
                 ATTACK_DEFAULT_GRAY_PORTRAIT, SKILL_DEFAULT_GRAY_PORTRAIT, POWER_DEFAULT_GRAY_PORTRAIT,
                 ENERGY_ORB_DEFAULT_GRAY_PORTRAIT, CARD_ENERGY_ORB);
-        
+        */
         logger.info("Done creating the color");
         
         
@@ -279,7 +275,7 @@ public class DefaultMod implements
     
     
     // =============== LOAD THE CHARACTER =================
-    
+  //TODO new character
     @Override
     public void receiveEditCharacters() {
        /* logger.info("Beginning to edit characters. " + "Add " + TheDefault.Enums.THE_DEFAULT.toString());
@@ -290,7 +286,7 @@ public class DefaultMod implements
         receiveEditPotions();
         logger.info("Added " + TheDefault.Enums.THE_DEFAULT.toString());*/
     }
-    
+
     // =============== /LOAD THE CHARACTER/ =================
     
     
@@ -344,11 +340,12 @@ public class DefaultMod implements
 
         // Create a new event builder
         // Since this is a builder these method calls (outside of create()) can be skipped/added as necessary
+      /*
         AddEventParams eventParams = new AddEventParams.Builder(IdentityCrisisEvent.ID, IdentityCrisisEvent.class) // for this specific event
             .dungeonID(TheCity.ID) // The dungeon (act) this event will appear in
             .playerClass(TheDefault.Enums.THE_DEFAULT) // Character specific event
             .create();
-
+*/
         //Don't Add the event
         //BaseMod.addEvent(eventParams);
 

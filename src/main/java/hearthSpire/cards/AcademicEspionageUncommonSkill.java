@@ -87,7 +87,7 @@ public class AcademicEspionageUncommonSkill extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         for(int i = 0; i < 10; ++i) {
             AbstractCard card = returnTrulyDiverseRandomCardInCombat().makeCopy();
-            if (card.cost > 1) {
+            if (card.cost > 1 || card.cost == 0) {
                 card.cost = 1;
                 card.costForTurn = 1;
                 card.isCostModified = true;
