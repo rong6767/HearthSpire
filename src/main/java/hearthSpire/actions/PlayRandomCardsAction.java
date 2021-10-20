@@ -22,11 +22,7 @@ import java.util.Random;
 public class PlayRandomCardsAction extends AbstractGameAction {
     private boolean exhaustCards;
     private int times;
-    public static CardGroup divColorlessCardPool;
-    public static CardGroup divCurseCardPool;
-    public static CardGroup divCommonCardPool;
-    public static CardGroup divUncommonCardPool;
-    public static CardGroup divRareCardPool;
+
 
     public PlayRandomCardsAction(AbstractCreature target, boolean exhausts, int times) {
         this.duration = Settings.ACTION_DUR_FAST;
@@ -36,76 +32,7 @@ public class PlayRandomCardsAction extends AbstractGameAction {
         this.exhaustCards = exhausts;
         this.times = times;
     }
-/*
-    public static void initializeCardPools() {
-        long startTime = System.currentTimeMillis();
-        ArrayList<AbstractCard> tmpPool = new ArrayList();
-        CardLibrary.addRedCards(tmpPool);
-        CardLibrary.addGreenCards(tmpPool);
-        CardLibrary.addBlueCards(tmpPool);
-        if (!UnlockTracker.isCharacterLocked("Watcher")) {
-            CardLibrary.addPurpleCards(tmpPool);
-        }
-        if (ModHelper.isModEnabled("Colorless Cards")) {
-            CardLibrary.addColorlessCards(tmpPool);
-        }
 
-        CardLibrary.addColorlessCards(tmpPool);
-        Iterator var4 = tmpPool.iterator();
-
-        AbstractCard c;
-        CardGroup commonCardPool = new CardGroup(CardGroup.CardGroupType.CARD_POOL);
-        CardGroup uncommonCardPool = new CardGroup(CardGroup.CardGroupType.CARD_POOL);
-        CardGroup rareCardPool = new CardGroup(CardGroup.CardGroupType.CARD_POOL);
-        CardGroup curseCardPool = new CardGroup(CardGroup.CardGroupType.CARD_POOL);
-        while(var4.hasNext()) {
-            c = (AbstractCard)var4.next();
-            switch(c.rarity) {
-                case COMMON:
-                    commonCardPool.addToTop(c);
-                    break;
-                case UNCOMMON:
-                    uncommonCardPool.addToTop(c);
-                    break;
-                case RARE:
-                    rareCardPool.addToTop(c);
-                    break;
-                case CURSE:
-                    curseCardPool.addToTop(c);
-                    break;
-                default:
-            }
-        }
-
-        divColorlessCardPool = new CardGroup(CardGroup.CardGroupType.CARD_POOL);
-        divCurseCardPool = new CardGroup(CardGroup.CardGroupType.CARD_POOL);
-        divRareCardPool = new CardGroup(CardGroup.CardGroupType.CARD_POOL);
-        divUncommonCardPool = new CardGroup(CardGroup.CardGroupType.CARD_POOL);
-        divCommonCardPool = new CardGroup(CardGroup.CardGroupType.CARD_POOL);
-
-
-        var4 = rareCardPool.group.iterator();
-
-        while(var4.hasNext()) {
-            c = (AbstractCard)var4.next();
-            divRareCardPool.addToBottom(c);
-        }
-
-        var4 = uncommonCardPool.group.iterator();
-
-        while(var4.hasNext()) {
-            c = (AbstractCard)var4.next();
-            divUncommonCardPool.addToBottom(c);
-        }
-
-        var4 = commonCardPool.group.iterator();
-
-        while(var4.hasNext()) {
-            c = (AbstractCard)var4.next();
-            divCommonCardPool.addToBottom(c);
-        }
-    }
-*/
     private AbstractCard.CardRarity randomRarity() {
         int pick = new Random().nextInt(5);
         return AbstractCard.CardRarity.values()[pick];
@@ -137,40 +64,6 @@ public class PlayRandomCardsAction extends AbstractGameAction {
     }
 
     public AbstractCard returnTrulyDiverseRandomCardInCombat() {
-        /*ArrayList<AbstractCard> list = new ArrayList();
-        initializeCardPools();
-        Iterator var1 = divCommonCardPool.group.iterator();
-
-        AbstractCard c;
-        while(var1.hasNext()) {
-            c = (AbstractCard)var1.next();
-            if (!c.hasTag(AbstractCard.CardTags.HEALING)) {
-                list.add(c);
-                UnlockTracker.markCardAsSeen(c.cardID);
-            }
-        }
-
-        var1 = divUncommonCardPool.group.iterator();
-
-        while(var1.hasNext()) {
-            c = (AbstractCard)var1.next();
-            if (!c.hasTag(AbstractCard.CardTags.HEALING)) {
-                list.add(c);
-                UnlockTracker.markCardAsSeen(c.cardID);
-            }
-        }
-
-        var1 = divRareCardPool.group.iterator();
-
-        while(var1.hasNext()) {
-            c = (AbstractCard)var1.next();
-            if (!c.hasTag(AbstractCard.CardTags.HEALING)) {
-                list.add(c);
-                UnlockTracker.markCardAsSeen(c.cardID);
-            }
-        }
-
-        return (AbstractCard)list.get(AbstractDungeon.cardRandomRng.random(list.size() - 1));*/
         return  getAnyColorCard(randomRarity());
     }
 

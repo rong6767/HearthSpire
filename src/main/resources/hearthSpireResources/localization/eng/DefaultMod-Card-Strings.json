@@ -138,6 +138,10 @@
     "NAME": "Hallucination",
     "DESCRIPTION": " Steal NL Choose 1 of 3 cards of any color to add into your hand.",
     "UPGRADE_DESCRIPTION": " Steal NL Choose 1 of 3 upgraded cards of any color to add into your hand."
+  },
+  "hearthSpire:TessGreymaneRareSkill": {
+    "NAME": "Tess Greymane",
+    "DESCRIPTION": " Replay every card from other colors you've played this combat (targets chosen randomly)."
   }
 
 
