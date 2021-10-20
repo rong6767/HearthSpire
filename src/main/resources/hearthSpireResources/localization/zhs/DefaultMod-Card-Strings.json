@@ -114,8 +114,8 @@
   },
   "hearthSpire:PickPocketUncommonSkill": {
     "NAME": "搜索",
-    "DESCRIPTION": " 虚无 . 将 2 张其他颜色的卡牌和搜索置入你的手牌。 消耗 .",
-    "UPGRADE_DESCRIPTION": " 虚无 . 将 2 张升级后的其他颜色卡牌和搜索置入你的手牌。 消耗 ."
+    "DESCRIPTION": " 虚无 . 偷盗 NL 将 2 张其他颜色的卡牌和搜索置入你的手牌。 消耗 .",
+    "UPGRADE_DESCRIPTION": " 虚无 . 偷盗 NL  将 2 张升级后的其他颜色卡牌和搜索置入你的手牌。 消耗 ."
   },
   "hearthSpire:EtherealPeddlerUncommonSkill": {
     "NAME": "虚灵商人",
@@ -123,8 +123,8 @@
   },
   "hearthSpire:DragonsHoardRareSkill": {
     "NAME": "巨龙宝藏",
-    "DESCRIPTION": "选择一张任意颜色的稀有牌置入你的手中. 消耗 .",
-    "UPGRADE_DESCRIPTION": "选择一张任意颜色的升级后的稀有牌置入你的手中. 消耗 ."
+    "DESCRIPTION": " 偷盗 NL 选择一张任意颜色的稀有牌置入你的手中. 消耗 .",
+    "UPGRADE_DESCRIPTION": " 偷盗 NL 选择一张任意颜色的升级后的稀有牌置入你的手中. 消耗 ."
   },
   "hearthSpire:BackfireUncommonSkill": {
     "NAME": "赛车回火",
@@ -132,7 +132,12 @@
   },
   "hearthSpire:AcademicEspionageUncommonSkill": {
     "NAME": "学术剽窃",
-    "DESCRIPTION": "将十张其他颜色的卡牌洗入你的牌库, 其消耗为 1 点. NL 消耗 ."
+    "DESCRIPTION": " 偷盗 NL 将十张其他颜色的卡牌洗入你的牌库, 其消耗为 1 点. NL 消耗 ."
+  },
+  "hearthSpire:HallucinationUncommonSkill": {
+    "NAME": "幻觉",
+    "DESCRIPTION": " 偷盗 NL 选择一张任意颜色的牌置入你的手中.",
+    "UPGRADE_DESCRIPTION": " 偷盗 NL 选择一张任意颜色的升级后的牌置入你的手中."
   }
 
 

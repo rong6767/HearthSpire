@@ -13,6 +13,12 @@
   },
   {
     "NAMES": [
+      "偷盗"
+    ],
+    "DESCRIPTION": " 生成的卡牌会包括无色牌和其他颜色的牌."
+  },
+  {
+    "NAMES": [
       "keyword",
       "keywords"
     ],

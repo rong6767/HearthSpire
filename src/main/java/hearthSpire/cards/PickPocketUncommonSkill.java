@@ -87,21 +87,38 @@ public class PickPocketUncommonSkill extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractCard c1 = returnTrulyDiverseRandomCardInCombat().makeCopy();
         AbstractCard c2 = returnTrulyDiverseRandomCardInCombat().makeCopy();
+        if (AbstractDungeon.player.hasRelic(DefaultMod.makeID("StickyFingerRelic"))) {
+            if (c1.cost >= 1 && c1.color != AbstractDungeon.player.getCardColor()) {
+                int newCost = c1.cost - 1;
+                if (c1.cost != newCost) {
+                    c1.cost = newCost;
+                    c1.costForTurn = c1.cost;
+                    c1.isCostModified = true;
+                }
+            }
+            if (c2.cost >= 1 && c2.color != AbstractDungeon.player.getCardColor()) {
+                int newCost = c2.cost - 1;
+                if (c2.cost != newCost) {
+                    c2.cost = newCost;
+                    c2.costForTurn = c2.cost;
+                    c2.isCostModified = true;
+                }
+            }
 
-        if (this.upgraded) {
-            c1.upgrade();
-            c2.upgrade();
-            this.addToBot(new MakeTempCardInHandAction(c1, 1));
-            this.addToBot(new MakeTempCardInHandAction(c2, 1));
-            this.addToBot(new MakeTempCardInHandAction(this, 1));
+            if (this.upgraded) {
+                c1.upgrade();
+                c2.upgrade();
+                this.addToBot(new MakeTempCardInHandAction(c1, 1));
+                this.addToBot(new MakeTempCardInHandAction(c2, 1));
+                this.addToBot(new MakeTempCardInHandAction(this, 1));
+            } else {
+                this.addToBot(new MakeTempCardInHandAction(c1, 1));
+                this.addToBot(new MakeTempCardInHandAction(c2, 1));
+                this.addToBot(new MakeTempCardInHandAction(this, 1));
+            }
+
+
         }
-        else {
-            this.addToBot(new MakeTempCardInHandAction(c1, 1));
-            this.addToBot(new MakeTempCardInHandAction(c2, 1));
-            this.addToBot(new MakeTempCardInHandAction(this, 1));
-        }
-
-
     }
 
     // Upgraded stats.

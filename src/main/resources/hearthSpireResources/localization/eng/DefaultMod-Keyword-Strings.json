@@ -14,6 +14,12 @@
   },
   {
     "NAMES": [
+      "steal"
+    ],
+    "DESCRIPTION": "Created cards contain colorless cards and cards from other colors."
+  },
+  {
+    "NAMES": [
       "keyword",
       "keywords"
     ],

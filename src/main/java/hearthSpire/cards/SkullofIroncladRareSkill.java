@@ -50,13 +50,12 @@ public class SkullofIroncladRareSkill extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if(p.hand.getBottomCard() == this || p.hand.getTopCard() == this ){
+        if (p.hand.getBottomCard() == this || p.hand.getTopCard() == this) {
             AbstractDungeon.actionManager.addToBottom(
                     new DrawCardAction(magicNumber, new SkullFollowAction()));
-        }
-        else{
+        } else {
             AbstractDungeon.actionManager.addToBottom(
-                    new DrawCardAction(p,magicNumber));
+                    new DrawCardAction(p, magicNumber));
         }
     }
 

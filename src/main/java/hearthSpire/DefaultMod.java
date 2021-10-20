@@ -1,6 +1,7 @@
 package hearthSpire;
 
 import basemod.*;
+import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
@@ -14,7 +15,9 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import hearthSpire.cards.AbstractDefaultCard;
+import hearthSpire.relics.StickyFingerRelic;
 import hearthSpire.util.IDCheckDontTouchPls;
 import hearthSpire.util.TextureLoader;
 import hearthSpire.variables.DefaultCustomVariable;
@@ -375,6 +378,11 @@ public class DefaultMod implements
     
     @Override
     public void receiveEditRelics() {
+        logger.info("Adding relics");
+        BaseMod.addRelic(new StickyFingerRelic(), RelicType.GREEN);
+        UnlockTracker.markRelicAsSeen(StickyFingerRelic.ID);
+
+
    /*     logger.info("Adding relics");
 
         // Take a look at https://github.com/daviscook477/BaseMod/wiki/AutoAdd

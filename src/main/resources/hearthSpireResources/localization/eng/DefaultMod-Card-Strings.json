@@ -114,8 +114,8 @@
   },
   "hearthSpire:PickPocketUncommonSkill": {
     "NAME": "Pick Pocket",
-    "DESCRIPTION": "Ethereal. Add 2 random cards of other colors to your hand. Add a Pick Pocket to your hand. Exhaust.",
-    "UPGRADE_DESCRIPTION": "Ethereal. Add 2 upgraded random cards of other colors to your hand. Add a Pick Pocket to your hand. Exhaust."
+    "DESCRIPTION": "Ethereal. Steal NL Add 2 random cards of other colors to your hand. Add a Pick Pocket to your hand. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Ethereal. Steal NL Add 2 upgraded random cards of other colors to your hand. Add a Pick Pocket to your hand. Exhaust."
   },
   "hearthSpire:EtherealPeddlerUncommonSkill": {
     "NAME": "Ethereal Peddler",
@@ -123,8 +123,8 @@
   },
   "hearthSpire:DragonsHoardRareSkill": {
     "NAME": "Dragon's Hoard",
-    "DESCRIPTION": "Choose 1 of 3 Rare cards of any color to add into your hand. Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose 1 of 3 upgraded Rare cards of any color to add into your hand. Exhaust."
+    "DESCRIPTION": " Steal NL Choose 1 of 3 Rare cards of any color to add into your hand. Exhaust.",
+    "UPGRADE_DESCRIPTION": " Steal NL Choose 1 of 3 upgraded Rare cards of any color to add into your hand. Exhaust."
   },
   "hearthSpire:BackfireUncommonSkill": {
     "NAME": "Backfire",
@@ -132,7 +132,13 @@
   },
   "hearthSpire:AcademicEspionageUncommonSkill": {
     "NAME": "Academic Espionage",
-    "DESCRIPTION": "Shuffle 10 cards of other colors into your draw pile. They cost 1. Exhaust."
+    "DESCRIPTION": " Steal NL Shuffle 10 cards of other colors into your draw pile. They cost 1. Exhaust."
+  },
+  "hearthSpire:HallucinationUncommonSkill": {
+    "NAME": "Hallucination",
+    "DESCRIPTION": " Steal NL Choose 1 of 3 cards of any color to add into your hand.",
+    "UPGRADE_DESCRIPTION": " Steal NL Choose 1 of 3 upgraded cards of any color to add into your hand."
   }
+
 
 }

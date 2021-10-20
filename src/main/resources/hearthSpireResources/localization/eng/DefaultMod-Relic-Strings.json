@@ -30,5 +30,12 @@
       ".",
       "Select a card to bottle for "
     ]
+  },
+  "hearthSpire:StickyFingerRelic": {
+    "NAME": "Sticky Fingers",
+    "FLAVOR": " Sticky Fingers.",
+    "DESCRIPTIONS": [
+      "Cards that you #yStole from other classes cost 1 less."
+    ]
   }
 }

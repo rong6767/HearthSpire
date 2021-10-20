@@ -87,9 +87,15 @@ public class AcademicEspionageUncommonSkill extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         for(int i = 0; i < 10; ++i) {
             AbstractCard card = returnTrulyDiverseRandomCardInCombat().makeCopy();
-            if (card.cost > 1 || card.cost == 0) {
+            if ((card.cost >= 1 || card.cost == 0) && !AbstractDungeon.player.hasRelic(DefaultMod.makeID("StickyFingerRelic"))) {
+                DefaultMod.logger.info("don't have relic");
                 card.cost = 1;
                 card.costForTurn = 1;
+                card.isCostModified = true;
+            } else if(AbstractDungeon.player.hasRelic(DefaultMod.makeID("StickyFingerRelic")) && (card.cost >= 1 || card.cost == 0)){
+                DefaultMod.logger.info("have relic");
+                card.cost = 0;
+                card.costForTurn = 0;
                 card.isCostModified = true;
             }
             this.addToBot(new MakeTempCardInDrawPileAction(card, 1, true, true));

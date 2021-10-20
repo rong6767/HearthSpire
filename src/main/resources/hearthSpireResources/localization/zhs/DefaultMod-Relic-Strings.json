@@ -30,5 +30,12 @@
       ".",
       "Select a card to bottle for "
     ]
+  },
+  "hearthSpire:StickyFingerRelic": {
+    "NAME": "顺手牵羊",
+    "FLAVOR": " 顺手牵羊.",
+    "DESCRIPTIONS": [
+      "你从其他职业 #y偷盗 的卡牌费用减少 1 ."
+    ]
   }
 }
