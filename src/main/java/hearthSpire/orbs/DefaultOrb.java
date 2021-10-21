@@ -1,5 +1,6 @@
 package hearthSpire.orbs;
 
+import basemod.abstracts.CustomOrb;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -7,7 +8,6 @@ import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -15,16 +15,17 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.OrbStrings;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.combat.DarkOrbActivateEffect;
 import com.megacrit.cardcrawl.vfx.combat.DarkOrbPassiveEffect;
 import com.megacrit.cardcrawl.vfx.combat.OrbFlareEffect;
-
-import basemod.abstracts.CustomOrb;
 import hearthSpire.DefaultMod;
+import hearthSpire.actions.PingAction;
 
+import static hearthSpire.DefaultMod.logger;
 import static hearthSpire.DefaultMod.makeOrbPath;
 
-public class DefaultOrb extends CustomOrb {
+public class DefaultOrb extends CustomOrb implements ClickableOrb{
 
     // Standard ID/Description
     public static final String ORB_ID = DefaultMod.makeID("DefaultOrb");
@@ -34,12 +35,15 @@ public class DefaultOrb extends CustomOrb {
     private static final int PASSIVE_AMOUNT = 3;
     private static final int EVOKE_AMOUNT = 1;
 
+
     // Animation Rendering Numbers - You can leave these at default, or play around with them and see what they change.
     private float vfxTimer = 1.0f;
     private float vfxIntervalMin = 0.1f;
     private float vfxIntervalMax = 0.4f;
     private static final float ORB_WAVY_DIST = 0.04f;
     private static final float PI_4 = 12.566371f;
+    public  boolean usedThisTurn = false; // You can also have a relic be only usable once per combat. Check out Hubris for more examples, including other StSlib things.
+    private boolean isPlayerTurn = true;
 
     public DefaultOrb() {
         // The passive/evoke description we pass in here, specifically, don't matter
@@ -86,11 +90,13 @@ public class DefaultOrb extends CustomOrb {
 
     @Override
     public void onStartOfTurn() {// 1.At the start of your turn.
-        AbstractDungeon.actionManager.addToBottom(// 2.This orb will have a flare effect
-                new VFXAction(new OrbFlareEffect(this, OrbFlareEffect.OrbFlareColor.FROST), 0.1f));
 
-        AbstractDungeon.actionManager.addToBottom(// 3. And draw you cards.
-                new DrawCardAction(AbstractDungeon.player, passiveAmount));
+        this.usedThisTurn = false;  // Resets the used this turn. You can remove this to use a orb only once per combat rather than per turn.
+        this.isPlayerTurn = true;
+    }
+    @Override
+    public void onEndOfTurn(){
+        isPlayerTurn = false; // Not our turn now.
     }
 
     @Override
@@ -102,6 +108,24 @@ public class DefaultOrb extends CustomOrb {
         if (vfxTimer < 0.0f) {
             AbstractDungeon.effectList.add(new DarkOrbPassiveEffect(cX, cY)); // This is the purple-sparkles in the orb. You can change this to whatever fits your orb.
             vfxTimer = MathUtils.random(vfxIntervalMin, vfxIntervalMax);
+        }
+    }
+
+    @Override
+    public void onRightClick() {
+        if ( this.usedThisTurn || !isPlayerTurn) {
+            logger.info("selected but used!");
+            // If it has been used this turn, the player doesn't actually have the relic (i.e. it's on display in the shop room), or it's the enemy's turn
+            return; // Don't do anything.
+        }
+
+        if (AbstractDungeon.getCurrRoom() != null && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) { // Only if you're in combat// Set relic as "Used this turn"
+            this.usedThisTurn = true;
+            AbstractDungeon.actionManager.addToBottom(new VFXAction(new OrbFlareEffect(this, OrbFlareEffect.OrbFlareColor.LIGHTNING), 0.2F));
+            AbstractDungeon.actionManager.addToBottom(new PingAction(5));
+
+
+
         }
     }
 
@@ -128,6 +152,9 @@ public class DefaultOrb extends CustomOrb {
     public void playChannelSFX() { // When you channel this orb, the ATTACK_FIRE effect plays ("Fwoom").
         CardCrawlGame.sound.play("ATTACK_FIRE", 0.1f);
     }
+
+
+
 
     @Override
     public AbstractOrb makeCopy() {

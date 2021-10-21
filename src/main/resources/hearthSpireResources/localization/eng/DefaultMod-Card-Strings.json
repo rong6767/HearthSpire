@@ -142,6 +142,11 @@
   "hearthSpire:TessGreymaneRareSkill": {
     "NAME": "Tess Greymane",
     "DESCRIPTION": " Replay every card from other colors you've played this combat (targets chosen randomly)."
+  },
+  "hearthSpire:SpectralCutlassRarePower": {
+    "NAME": "SpectralCutlass",
+    "DESCRIPTION": "Whenever you play a card from other colors, gain 2 Block.",
+    "UPGRADE_DESCRIPTION": " Innate . Whenever you play a card from other colors, gain 2 Block."
   }
 
 

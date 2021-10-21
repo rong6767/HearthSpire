@@ -142,6 +142,11 @@
   "hearthSpire:TessGreymaneRareSkill": {
     "NAME": "苔丝·格雷迈恩",
     "DESCRIPTION": "重新使用在本局对战中你所使用过的其他颜色的卡牌（目标随机而定）."
+  },
+  "hearthSpire:SpectralCutlassRarePower": {
+    "NAME": "幽灵弯刀",
+    "DESCRIPTION": "每当你打出一张其他颜色的牌，都获得2点格挡.",
+    "UPGRADE_DESCRIPTION": " 固有 . 每当你打出一张其他颜色的牌，都获得2点格挡."
   }
 
 

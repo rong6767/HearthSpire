@@ -10,5 +10,9 @@
   "hearthSpire:FreeCardPower": {
     "NAME": "免费卡牌",
     "DESCRIPTIONS": ["你接下来的 #b", " 张卡牌消耗为 0." , " 张卡牌消耗为 0."]
+  },
+  "hearthSpire:SpectralCutlassPower": {
+    "NAME": "幽灵弯刀",
+    "DESCRIPTIONS": ["每当你打出一张其他颜色的牌，获得2护甲."]
   }
 }

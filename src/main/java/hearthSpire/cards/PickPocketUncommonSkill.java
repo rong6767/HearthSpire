@@ -42,7 +42,7 @@ public class PickPocketUncommonSkill extends AbstractDynamicCard {
     public PickPocketUncommonSkill() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.exhaust = true;
-        this.isEthereal=true;
+        this.isEthereal = true;
     }
 
     private AbstractCard.CardRarity randomRarity() {
@@ -126,7 +126,7 @@ public class PickPocketUncommonSkill extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
+            upgradeBaseCost(0);
             initializeDescription();
         }
     }

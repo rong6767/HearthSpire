@@ -10,5 +10,9 @@
 "hearthSpire:FreeCardPower": {
 "NAME": "Free Card Power",
 "DESCRIPTIONS": ["Your next #b", " card costs 0." , " cards cost 0."]
-}
+},
+  "hearthSpire:SpectralCutlassPower": {
+    "NAME": "Spectral Cutlass",
+    "DESCRIPTIONS": ["Whenever you play a card from other colors, gain 2 Block."]
+  }
 }
