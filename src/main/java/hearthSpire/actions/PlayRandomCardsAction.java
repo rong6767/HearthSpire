@@ -42,7 +42,7 @@ public class PlayRandomCardsAction extends AbstractGameAction {
         CardGroup anyCard = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         Iterator var2 = CardLibrary.cards.entrySet().iterator();
 
-        while(true) {
+        while (true) {
             Map.Entry c;
             do {
                 do {
@@ -53,23 +53,23 @@ public class PlayRandomCardsAction extends AbstractGameAction {
                                 return anyCard.getRandomCard(true, rarity).makeCopy();
                             }
 
-                            c = (Map.Entry)var2.next();
-                        } while(((AbstractCard)c.getValue()).rarity != rarity);
-                    } while(((AbstractCard)c.getValue()).type == AbstractCard.CardType.CURSE);
-                } while(((AbstractCard)c.getValue()).type == AbstractCard.CardType.STATUS);
-            } while(UnlockTracker.isCardLocked((String)c.getKey()) && !Settings.treatEverythingAsUnlocked());
+                            c = (Map.Entry) var2.next();
+                        } while (((AbstractCard) c.getValue()).rarity != rarity);
+                    } while (((AbstractCard) c.getValue()).type == AbstractCard.CardType.CURSE);
+                } while (((AbstractCard) c.getValue()).type == AbstractCard.CardType.STATUS);
+            } while (UnlockTracker.isCardLocked((String) c.getKey()) && !Settings.treatEverythingAsUnlocked());
 
-            anyCard.addToBottom((AbstractCard)c.getValue());
+            anyCard.addToBottom((AbstractCard) c.getValue());
         }
     }
 
     public AbstractCard returnTrulyDiverseRandomCardInCombat() {
-        return  getAnyColorCard(randomRarity());
+        return getAnyColorCard(randomRarity());
     }
 
-    
+
     public void update() {
-        for(int i=0;i<times;i++) {
+        for (int i = 0; i < times; i++) {
             AbstractCard card = null;
             boolean random = false;
             try {
@@ -79,11 +79,10 @@ public class PlayRandomCardsAction extends AbstractGameAction {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            if(random) {
+            if (random) {
 
                 card = returnTrulyDiverseRandomCardInCombat().makeCopy();
-            }
-            else{
+            } else {
                 card = AbstractDungeon.returnTrulyRandomCardInCombat().makeCopy();
             }
             card.exhaustOnUseOnce = this.exhaustCards;
@@ -104,8 +103,8 @@ public class PlayRandomCardsAction extends AbstractGameAction {
                 this.addToTop(new WaitAction(Settings.ACTION_DUR_FASTER));
             }
         }
-                this.isDone = true;
-        }
-
+        this.isDone = true;
     }
+
+}
 

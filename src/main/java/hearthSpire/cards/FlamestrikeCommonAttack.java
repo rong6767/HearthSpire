@@ -11,7 +11,7 @@ import hearthSpire.DefaultMod;
 
 import static hearthSpire.DefaultMod.makeCardPath;
 
-public class FlamestrikeCommonAttack extends AbstractDynamicCard{
+public class FlamestrikeCommonAttack extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(FlamestrikeCommonAttack.class.getSimpleName());
     public static final String IMG = makeCardPath("Flamestrike.png");
@@ -23,7 +23,6 @@ public class FlamestrikeCommonAttack extends AbstractDynamicCard{
     public static final CardColor COLOR = CardColor.BLUE;
 
     private static final int COST = 2;
-
 
 
     public FlamestrikeCommonAttack() {

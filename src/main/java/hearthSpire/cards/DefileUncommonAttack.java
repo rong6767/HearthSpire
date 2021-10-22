@@ -5,36 +5,44 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hearthSpire.DefaultMod;
-import hearthSpire.actions.ShadowVIsionsAction;
+import hearthSpire.actions.DefileAction;
 
 import static hearthSpire.DefaultMod.makeCardPath;
 
-public class ShadowVisionsUncommonSkill extends AbstractDynamicCard {
+public class DefileUncommonAttack extends AbstractDynamicCard {
+
+    /*
+     * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
+     *
+     * Big Slap Deal 10(15)) damage.
+     */
 
     // TEXT DECLARATION
 
-    public static final String ID = DefaultMod.makeID(ShadowVisionsUncommonSkill.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(DefileUncommonAttack.class.getSimpleName());
+    public static final String IMG = makeCardPath("Defile.png");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
-    public static final String IMG = makeCardPath("ShadowVisions.png");
 
     // /TEXT DECLARATION/
 
+
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
-    private static final CardTarget TARGET = CardTarget.NONE;
-    private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = CardColor.PURPLE;
+    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
+    private static final CardType TYPE = CardType.ATTACK;
+    public static final CardColor COLOR = CardColor.RED;
 
     private static final int COST = 1;
-    private static boolean UPGRADED = false;
+    private static final int DAMAGE = 5;
 
     // /STAT DECLARATION/
 
 
-    public ShadowVisionsUncommonSkill() {
+    public DefileUncommonAttack() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        this.damage = baseDamage = DAMAGE;
         this.exhaust = true;
 
     }
@@ -42,15 +50,17 @@ public class ShadowVisionsUncommonSkill extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ShadowVIsionsAction(UPGRADED));
+        this.addToBot(new DefileAction(p, baseDamage));
+
     }
 
-    // Upgraded stats.
+    //Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            UPGRADED = true;
+            upgradeBaseCost(0);
+            this.exhaust = false;
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

@@ -44,11 +44,10 @@ public class PuzzleBoxofYoggSaronRareSkill extends AbstractDynamicCard {
     }
 
 
-
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new PlayRandomCardsAction(AbstractDungeon.getCurrRoom().monsters.getRandomMonster((AbstractMonster)null, true, AbstractDungeon.cardRandomRng), true,magicNumber));
+        this.addToBot(new PlayRandomCardsAction(AbstractDungeon.getCurrRoom().monsters.getRandomMonster((AbstractMonster) null, true, AbstractDungeon.cardRandomRng), true, magicNumber));
     }
 
     // Upgraded stats.

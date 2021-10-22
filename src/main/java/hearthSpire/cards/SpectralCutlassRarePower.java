@@ -12,7 +12,7 @@ import hearthSpire.powers.SpectralCutlassPower;
 
 import static hearthSpire.DefaultMod.makeCardPath;
 
-public class SpectralCutlassRarePower extends AbstractDynamicCard{
+public class SpectralCutlassRarePower extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(SpectralCutlassRarePower.class.getSimpleName());

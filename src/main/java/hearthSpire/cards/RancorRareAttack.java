@@ -11,7 +11,7 @@ import hearthSpire.actions.BlockDamageAllEnemiesAction;
 
 import static hearthSpire.DefaultMod.makeCardPath;
 
-public class RancorRareAttack extends AbstractDynamicCard{
+public class RancorRareAttack extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(RancorRareAttack.class.getSimpleName());
     public static final String IMG = makeCardPath("Rancor.png");
@@ -23,7 +23,6 @@ public class RancorRareAttack extends AbstractDynamicCard{
     public static final CardColor COLOR = CardColor.RED;
 
     private static final int COST = 2;
-
 
 
     public RancorRareAttack() {

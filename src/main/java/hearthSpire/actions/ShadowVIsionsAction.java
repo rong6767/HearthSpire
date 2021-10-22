@@ -27,29 +27,29 @@ public class ShadowVIsionsAction extends AbstractGameAction {
     public void update() {
 
 
-            if (AbstractDungeon.player.hand.size() == 10) {
-                AbstractDungeon.player.createHandIsFullDialog();
-                this.isDone = true;
-            } else if (this.p.drawPile.isEmpty()) {
-                this.isDone = true;
-            } else if (this.p.drawPile.size() == 1) {
-                    AbstractCard card = this.p.drawPile.getTopCard().makeCopy();
-                    card.unfadeOut();
-                    this.p.hand.addToHand(card);
-                    if (this.upgrade && card.canUpgrade()) {
-                        card.upgrade();
-                    }
-                    this.isDone = true;
-
-            } else {
-                AbstractCard card = this.p.drawPile.getRandomCard(false).makeCopy();
-                this.p.hand.addToHand(card);
-                if (this.upgrade && card.canUpgrade()) {
-                    card.upgrade();
-                }
-
-                this.isDone = true;
+        if (AbstractDungeon.player.hand.size() == 10) {
+            AbstractDungeon.player.createHandIsFullDialog();
+            this.isDone = true;
+        } else if (this.p.drawPile.isEmpty()) {
+            this.isDone = true;
+        } else if (this.p.drawPile.size() == 1) {
+            AbstractCard card = this.p.drawPile.getTopCard().makeCopy();
+            card.unfadeOut();
+            this.p.hand.addToHand(card);
+            if (this.upgrade && card.canUpgrade()) {
+                card.upgrade();
             }
+            this.isDone = true;
+
+        } else {
+            AbstractCard card = this.p.drawPile.getRandomCard(false).makeCopy();
+            this.p.hand.addToHand(card);
+            if (this.upgrade && card.canUpgrade()) {
+                card.upgrade();
+            }
+
+            this.isDone = true;
+        }
     }
 
 

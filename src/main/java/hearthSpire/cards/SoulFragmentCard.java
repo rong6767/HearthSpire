@@ -29,13 +29,13 @@ public class SoulFragmentCard extends AbstractDynamicCard {
 
     public SoulFragmentCard() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        magicNumber = baseMagicNumber =2;
+        magicNumber = baseMagicNumber = 2;
         this.isEthereal = true;
     }
 
     public void triggerWhenDrawn() {
-        this.addToBot(new HealAction(AbstractDungeon.player,AbstractDungeon.player,magicNumber));
-        this.addToBot(new ExhaustSpecificCardAction(this,AbstractDungeon.player.hand));
+        this.addToBot(new HealAction(AbstractDungeon.player, AbstractDungeon.player, magicNumber));
+        this.addToBot(new ExhaustSpecificCardAction(this, AbstractDungeon.player.hand));
         this.addToBot(new DrawCardAction(1));
     }
 
@@ -47,6 +47,10 @@ public class SoulFragmentCard extends AbstractDynamicCard {
     }
 
     public void upgrade() {
+        if (!upgraded) {
+            upgradeName();
+            upgradeMagicNumber(2);
+        }
     }
 
 

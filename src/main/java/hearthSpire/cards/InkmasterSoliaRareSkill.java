@@ -36,15 +36,15 @@ public class InkmasterSoliaRareSkill extends AbstractDynamicCard {
 
     public InkmasterSoliaRareSkill() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        magicNumber = baseMagicNumber =1;
+        magicNumber = baseMagicNumber = 1;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if(p.masterDeck.highlanderCheck()) {
+        if (p.masterDeck.highlanderCheck()) {
             this.addToBot(new ApplyPowerAction(p, p, new FreeCardPower(p, magicNumber), 1));
-        }else {
+        } else {
 
         }
     }

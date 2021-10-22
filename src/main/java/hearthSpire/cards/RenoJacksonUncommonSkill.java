@@ -35,17 +35,17 @@ public class RenoJacksonUncommonSkill extends AbstractDynamicCard {
 
     public RenoJacksonUncommonSkill() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        magicNumber = baseMagicNumber =8;
+        magicNumber = baseMagicNumber = 8;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if(p.masterDeck.highlanderCheck()) {
-            this.addToBot(new HealAction(p,p,4));
-            this.addToBot(new HealAction(p,p,magicNumber));
-        }else {
-            this.addToBot(new HealAction(p,p,4));
+        if (p.masterDeck.highlanderCheck()) {
+            this.addToBot(new HealAction(p, p, 4));
+            this.addToBot(new HealAction(p, p, magicNumber));
+        } else {
+            this.addToBot(new HealAction(p, p, 4));
         }
     }
 

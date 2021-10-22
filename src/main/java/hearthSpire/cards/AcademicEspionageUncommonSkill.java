@@ -42,7 +42,7 @@ public class AcademicEspionageUncommonSkill extends AbstractDynamicCard {
     public AcademicEspionageUncommonSkill() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.exhaust = true;
-           //可以升级的数字
+        //可以升级的数字
     }
 
     private AbstractCard.CardRarity randomRarity() {
@@ -55,7 +55,7 @@ public class AcademicEspionageUncommonSkill extends AbstractDynamicCard {
         Iterator var2 = CardLibrary.cards.entrySet().iterator();
         CardColor color = AbstractDungeon.player.getCardColor();
 
-        while(true) {
+        while (true) {
             Map.Entry c;
             do {
                 do {
@@ -68,31 +68,31 @@ public class AcademicEspionageUncommonSkill extends AbstractDynamicCard {
                                 }
 
                                 c = (Map.Entry) var2.next();
-                            } while(((AbstractCard)c.getValue()).color == color);
-                        } while(((AbstractCard)c.getValue()).rarity != rarity);
-                    } while(((AbstractCard)c.getValue()).type == AbstractCard.CardType.CURSE);
-                } while(((AbstractCard)c.getValue()).type == AbstractCard.CardType.STATUS);
-            } while(UnlockTracker.isCardLocked((String)c.getKey()) && !Settings.treatEverythingAsUnlocked());
+                            } while (((AbstractCard) c.getValue()).color == color);
+                        } while (((AbstractCard) c.getValue()).rarity != rarity);
+                    } while (((AbstractCard) c.getValue()).type == AbstractCard.CardType.CURSE);
+                } while (((AbstractCard) c.getValue()).type == AbstractCard.CardType.STATUS);
+            } while (UnlockTracker.isCardLocked((String) c.getKey()) && !Settings.treatEverythingAsUnlocked());
 
-            anyCard.addToBottom((AbstractCard)c.getValue());
+            anyCard.addToBottom((AbstractCard) c.getValue());
         }
     }
 
     public AbstractCard returnTrulyDiverseRandomCardInCombat() {
-        return  getAnyColorCard(randomRarity());
+        return getAnyColorCard(randomRarity());
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for(int i = 0; i < 10; ++i) {
+        for (int i = 0; i < 10; ++i) {
             AbstractCard card = returnTrulyDiverseRandomCardInCombat().makeCopy();
             if ((card.cost >= 1 || card.cost == 0) && !AbstractDungeon.player.hasRelic(DefaultMod.makeID("StickyFingerRelic"))) {
                 DefaultMod.logger.info("don't have relic");
                 card.cost = 1;
                 card.costForTurn = 1;
                 card.isCostModified = true;
-            } else if(AbstractDungeon.player.hasRelic(DefaultMod.makeID("StickyFingerRelic")) && (card.cost >= 1 || card.cost == 0)){
+            } else if (AbstractDungeon.player.hasRelic(DefaultMod.makeID("StickyFingerRelic")) && (card.cost >= 1 || card.cost == 0)) {
                 DefaultMod.logger.info("have relic");
                 card.cost = 0;
                 card.costForTurn = 0;

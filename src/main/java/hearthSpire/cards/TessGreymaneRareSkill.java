@@ -43,11 +43,10 @@ public class TessGreymaneRareSkill extends AbstractDynamicCard {
     }
 
 
-
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new TessAction(AbstractDungeon.getCurrRoom().monsters.getRandomMonster((AbstractMonster)null, true, AbstractDungeon.cardRandomRng),true));
+        this.addToBot(new TessAction(AbstractDungeon.getCurrRoom().monsters.getRandomMonster((AbstractMonster) null, true, AbstractDungeon.cardRandomRng), true));
     }
 
     // Upgraded stats.

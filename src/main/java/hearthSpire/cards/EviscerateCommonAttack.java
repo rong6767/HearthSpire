@@ -38,11 +38,10 @@ public class EviscerateCommonAttack extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         int count = AbstractDungeon.actionManager.cardsPlayedThisTurn.size();
-        if(count == 1){
-            this.addToBot( new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
+        if (count == 1) {
+            this.addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
                     AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-        }
-        else{
+        } else {
             this.addToBot(
                     new DamageAction(m, new DamageInfo(p, magicNumber, damageTypeForTurn),
                             AbstractGameAction.AttackEffect.BLUNT_LIGHT));

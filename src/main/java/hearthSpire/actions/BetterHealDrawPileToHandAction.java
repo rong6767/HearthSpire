@@ -46,15 +46,15 @@ public class BetterHealDrawPileToHandAction extends AbstractGameAction {
                     ArrayList<AbstractCard> cardsToMove = new ArrayList();
                     var6 = this.player.drawPile.group.iterator();
 
-                    while(var6.hasNext()) {
-                        c = (AbstractCard)var6.next();
+                    while (var6.hasNext()) {
+                        c = (AbstractCard) var6.next();
                         cardsToMove.add(c);
                     }
 
                     var6 = cardsToMove.iterator();
 
-                    while(var6.hasNext()) {
-                        c = (AbstractCard)var6.next();
+                    while (var6.hasNext()) {
+                        c = (AbstractCard) var6.next();
                         if (this.player.hand.size() == 10) {
                             this.player.drawPile.moveToDiscardPile(c);
                             this.player.createHandIsFullDialog();
@@ -68,8 +68,8 @@ public class BetterHealDrawPileToHandAction extends AbstractGameAction {
                     CardGroup temp = new CardGroup(CardGroupType.UNSPECIFIED);
                     var6 = this.player.drawPile.group.iterator();
 
-                    while(var6.hasNext()) {
-                        c = (AbstractCard)var6.next();
+                    while (var6.hasNext()) {
+                        c = (AbstractCard) var6.next();
                         temp.addToTop(c);
                     }
 
@@ -89,7 +89,7 @@ public class BetterHealDrawPileToHandAction extends AbstractGameAction {
 
                     this.tickDuration();
                 }
-                this.player.heal(c.cost*times);
+                this.player.heal(c.cost * times);
             } else {
                 this.isDone = true;
             }
@@ -97,8 +97,8 @@ public class BetterHealDrawPileToHandAction extends AbstractGameAction {
             if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
                 Iterator var1 = AbstractDungeon.gridSelectScreen.selectedCards.iterator();
 
-                while(var1.hasNext()) {
-                    AbstractCard c = (AbstractCard)var1.next();
+                while (var1.hasNext()) {
+                    AbstractCard c = (AbstractCard) var1.next();
                     if (this.player.hand.size() == 10) {
                         this.player.drawPile.moveToDiscardPile(c);
                         this.player.createHandIsFullDialog();

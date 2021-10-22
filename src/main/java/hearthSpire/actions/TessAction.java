@@ -14,8 +14,7 @@ import java.util.Iterator;
 
 public class TessAction extends AbstractGameAction {
     private boolean exhaustCards;
-    private int times = 0 ;
-
+    private int times = 0;
 
 
     public TessAction(AbstractCreature target, boolean exhausts) {
@@ -28,12 +27,11 @@ public class TessAction extends AbstractGameAction {
     }
 
 
-
     public void update() {
         Iterator var2 = AbstractDungeon.actionManager.cardsPlayedThisCombat.iterator();
-        while(var2.hasNext()) {
-            AbstractCard card = (AbstractCard)var2.next();
-            if(card.color != AbstractDungeon.player.getCardColor()) {
+        while (var2.hasNext()) {
+            AbstractCard card = (AbstractCard) var2.next();
+            if (card.color != AbstractDungeon.player.getCardColor()) {
                 card.exhaustOnUseOnce = this.exhaustCards;
                 AbstractDungeon.player.limbo.group.add(card);
                 card.current_y = -200.0F * Settings.scale;

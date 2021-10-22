@@ -55,7 +55,7 @@ public class PickPocketUncommonSkill extends AbstractDynamicCard {
         Iterator var2 = CardLibrary.cards.entrySet().iterator();
         CardColor color = AbstractDungeon.player.getCardColor();
 
-        while(true) {
+        while (true) {
             Map.Entry c;
             do {
                 do {
@@ -68,18 +68,18 @@ public class PickPocketUncommonSkill extends AbstractDynamicCard {
                                 }
 
                                 c = (Map.Entry) var2.next();
-                            } while(((AbstractCard)c.getValue()).color == color);
-                        } while(((AbstractCard)c.getValue()).rarity != rarity);
-                    } while(((AbstractCard)c.getValue()).type == AbstractCard.CardType.CURSE);
-                } while(((AbstractCard)c.getValue()).type == AbstractCard.CardType.STATUS);
-            } while(UnlockTracker.isCardLocked((String)c.getKey()) && !Settings.treatEverythingAsUnlocked());
+                            } while (((AbstractCard) c.getValue()).color == color);
+                        } while (((AbstractCard) c.getValue()).rarity != rarity);
+                    } while (((AbstractCard) c.getValue()).type == AbstractCard.CardType.CURSE);
+                } while (((AbstractCard) c.getValue()).type == AbstractCard.CardType.STATUS);
+            } while (UnlockTracker.isCardLocked((String) c.getKey()) && !Settings.treatEverythingAsUnlocked());
 
-            anyCard.addToBottom((AbstractCard)c.getValue());
+            anyCard.addToBottom((AbstractCard) c.getValue());
         }
     }
 
     public AbstractCard returnTrulyDiverseRandomCardInCombat() {
-        return  getAnyColorCard(randomRarity());
+        return getAnyColorCard(randomRarity());
     }
 
     // Actions the card should do.

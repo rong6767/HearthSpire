@@ -36,7 +36,7 @@ public class DragonsHoardAction extends AbstractGameAction {
                     if (this.upgraded) {
                         disCard.upgrade();
                     }
-                    if(AbstractDungeon.player.hasRelic(DefaultMod.makeID("StickyFingerRelic"))) {
+                    if (AbstractDungeon.player.hasRelic(DefaultMod.makeID("StickyFingerRelic"))) {
                         if (disCard.cost >= 1 && disCard.color != AbstractDungeon.player.getCardColor()) {
                             int newCost = disCard.cost - 1;
                             if (disCard.cost != newCost) {
@@ -49,9 +49,9 @@ public class DragonsHoardAction extends AbstractGameAction {
 
                     disCard.current_x = -1000.0F * Settings.xScale;
                     if (AbstractDungeon.player.hand.size() < 10) {
-                        AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(disCard, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                        AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(disCard, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
                     } else {
-                        AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(disCard, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                        AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(disCard, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
                     }
 
                     AbstractDungeon.cardRewardScreen.discoveryCard = null;
@@ -67,7 +67,7 @@ public class DragonsHoardAction extends AbstractGameAction {
     private ArrayList<AbstractCard> generateCardChoices() {
         ArrayList derp = new ArrayList();
 
-        while(derp.size() != 3) {
+        while (derp.size() != 3) {
             boolean dupe = false;
             CardRarity cardRarity;
             cardRarity = CardRarity.RARE;
@@ -75,8 +75,8 @@ public class DragonsHoardAction extends AbstractGameAction {
             AbstractCard tmp = CardLibrary.getAnyColorCard(cardRarity);
             Iterator var6 = derp.iterator();
 
-            while(var6.hasNext()) {
-                AbstractCard c = (AbstractCard)var6.next();
+            while (var6.hasNext()) {
+                AbstractCard c = (AbstractCard) var6.next();
                 if (c.cardID.equals(tmp.cardID)) {
                     dupe = true;
                     break;

@@ -31,14 +31,14 @@ public class OverflowUncommonSkill extends AbstractDynamicCard {
 
     public OverflowUncommonSkill() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        magicNumber = baseMagicNumber =5;
+        magicNumber = baseMagicNumber = 5;
         this.exhaust = true;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new HealAllAction(p,p,magicNumber));
+        this.addToBot(new HealAllAction(p, p, magicNumber));
     }
 
     // Upgraded stats.

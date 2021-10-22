@@ -88,7 +88,7 @@
   },
   "hearthSpire:SoulFragmentCard": {
     "NAME": "Soul Fragment",
-    "DESCRIPTION": "Unplayable. Cast when drawn, restore 2 health."
+    "DESCRIPTION": "Unplayable. Cast when drawn, restore !M! health."
   },
   "hearthSpire:SoulShearUncommonAttack": {
     "NAME": "Soul Shear",
@@ -147,7 +147,10 @@
     "NAME": "SpectralCutlass",
     "DESCRIPTION": "Whenever you play a card from other colors, gain 2 Block.",
     "UPGRADE_DESCRIPTION": " Innate . Whenever you play a card from other colors, gain 2 Block."
+  },
+  "hearthSpire:DefileUncommonAttack": {
+    "NAME": "Defile",
+    "DESCRIPTION": "Deal 5 damage to all enemies. If any enemy's health or block end with 0, cast this again. Exhaust.",
+    "UPGRADE_DESCRIPTION": " Deal 5 damage to all enemies. If any enemy's health or block end with 0, cast this again."
   }
-
-
 }

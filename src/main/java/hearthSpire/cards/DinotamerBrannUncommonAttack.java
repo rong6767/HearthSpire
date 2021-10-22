@@ -38,12 +38,11 @@ public class DinotamerBrannUncommonAttack extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         int count = AbstractDungeon.actionManager.cardsPlayedThisTurn.size();
-        if(!p.masterDeck.highlanderCheck()){
-            this.addToBot( new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
+        if (!p.masterDeck.highlanderCheck()) {
+            this.addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
                     AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-        }
-        else{
-            this.addToBot( new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
+        } else {
+            this.addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
                     AbstractGameAction.AttackEffect.BLUNT_LIGHT));
             this.addToBot(
                     new DamageAction(m, new DamageInfo(p, magicNumber, damageTypeForTurn),

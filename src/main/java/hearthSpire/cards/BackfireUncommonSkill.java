@@ -32,7 +32,7 @@ public class BackfireUncommonSkill extends AbstractDynamicCard {
 
     public BackfireUncommonSkill() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        magicNumber = baseMagicNumber =3;     //可以升级的数字
+        magicNumber = baseMagicNumber = 3;     //可以升级的数字
     }
 
     // Actions the card should do.

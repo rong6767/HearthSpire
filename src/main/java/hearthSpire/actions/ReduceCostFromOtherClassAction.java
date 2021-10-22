@@ -25,8 +25,8 @@ public class ReduceCostFromOtherClassAction extends AbstractGameAction {
             boolean possible = false;
             Iterator var3 = this.p.hand.group.iterator();
 
-            while(var3.hasNext()) {
-                AbstractCard c = (AbstractCard)var3.next();
+            while (var3.hasNext()) {
+                AbstractCard c = (AbstractCard) var3.next();
                 if (c.costForTurn > 0) {
                     betterPossible = true;
                 } else if (c.cost > 0) {
@@ -46,18 +46,18 @@ public class ReduceCostFromOtherClassAction extends AbstractGameAction {
         Iterator var4 = this.p.hand.group.iterator();
         AbstractCard.CardColor color = p.getCardColor();
 
-        while (var4.hasNext()){
-            AbstractCard c = (AbstractCard)var4.next();
-            if(c.color !=color){
+        while (var4.hasNext()) {
+            AbstractCard c = (AbstractCard) var4.next();
+            if (c.color != color) {
 
                 if (0 < c.costForTurn && c.costForTurn <= 2) {
                     c.cost = 0;
                     c.costForTurn = 0;
                     c.isCostModified = true;
                     c.superFlash(Color.GOLD.cpy());
-                } else if(c.costForTurn > 2 ){
+                } else if (c.costForTurn > 2) {
                     c.cost -= 2;
-                    c.costForTurn -=2;
+                    c.costForTurn -= 2;
                     c.isCostModified = true;
                     c.superFlash(Color.GOLD.cpy());
                 }

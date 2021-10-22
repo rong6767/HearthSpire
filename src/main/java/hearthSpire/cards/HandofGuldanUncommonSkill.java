@@ -32,14 +32,14 @@ public class HandofGuldanUncommonSkill extends AbstractDynamicCard {
 
     public HandofGuldanUncommonSkill() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        magicNumber = baseMagicNumber =3;
+        magicNumber = baseMagicNumber = 3;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
-                new DrawCardAction(p,magicNumber));
+                new DrawCardAction(p, magicNumber));
     }
 
     public void triggerOnManualDiscard() {

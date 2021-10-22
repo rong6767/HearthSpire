@@ -13,9 +13,10 @@ import java.util.ArrayList;
 public class HealAllAction extends AbstractGameAction {
 
     public static final Logger logger = LogManager.getLogger(HealAllAction.class.getName());
-    public HealAllAction( AbstractCreature target, AbstractCreature source, int amount) {
+
+    public HealAllAction(AbstractCreature target, AbstractCreature source, int amount) {
         this.setValues(target, source, amount);
-        this.duration=0.01F;
+        this.duration = 0.01F;
         this.startDuration = this.duration;
         if (Settings.FAST_MODE) {
             this.duration = this.startDuration = Settings.ACTION_DUR_FAST;
@@ -28,9 +29,9 @@ public class HealAllAction extends AbstractGameAction {
     public void update() {
         this.target.heal(amount);
         ArrayList<AbstractMonster> m = AbstractDungeon.getMonsters().monsters;
-        for (AbstractMonster monster : m){
+        for (AbstractMonster monster : m) {
             monster.heal(amount);
         }
-        isDone =true;
+        isDone = true;
     }
 }

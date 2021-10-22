@@ -24,7 +24,7 @@ public class DiscoveryHealAction extends AbstractGameAction {
         this.actionType = ActionType.CARD_MANIPULATION;
         this.duration = Settings.ACTION_DUR_FAST;
         this.amount = 1;
-        this.times =times;
+        this.times = times;
     }
 
     public DiscoveryHealAction(CardType type, int amount, int times) {
@@ -67,21 +67,21 @@ public class DiscoveryHealAction extends AbstractGameAction {
                     disCard2.current_x = -1000.0F * Settings.xScale + AbstractCard.IMG_HEIGHT_S;
                     if (this.amount == 1) {
                         if (AbstractDungeon.player.hand.size() < 10) {
-                            AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(disCard, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                            AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(disCard, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
                         } else {
-                            AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(disCard, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                            AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(disCard, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
                         }
 
                         disCard2 = null;
                     } else if (AbstractDungeon.player.hand.size() + this.amount <= 10) {
-                        AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(disCard, (float)Settings.WIDTH / 2.0F - AbstractCard.IMG_WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
-                        AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(disCard2, (float)Settings.WIDTH / 2.0F + AbstractCard.IMG_WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                        AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(disCard, (float) Settings.WIDTH / 2.0F - AbstractCard.IMG_WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
+                        AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(disCard2, (float) Settings.WIDTH / 2.0F + AbstractCard.IMG_WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
                     } else if (AbstractDungeon.player.hand.size() == 9) {
-                        AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(disCard, (float)Settings.WIDTH / 2.0F - AbstractCard.IMG_WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
-                        AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(disCard2, (float)Settings.WIDTH / 2.0F + AbstractCard.IMG_WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                        AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(disCard, (float) Settings.WIDTH / 2.0F - AbstractCard.IMG_WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
+                        AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(disCard2, (float) Settings.WIDTH / 2.0F + AbstractCard.IMG_WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
                     } else {
-                        AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(disCard, (float)Settings.WIDTH / 2.0F - AbstractCard.IMG_WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
-                        AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(disCard2, (float)Settings.WIDTH / 2.0F + AbstractCard.IMG_WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                        AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(disCard, (float) Settings.WIDTH / 2.0F - AbstractCard.IMG_WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
+                        AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(disCard2, (float) Settings.WIDTH / 2.0F + AbstractCard.IMG_WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
                     }
                     AbstractDungeon.player.heal(disCard.cost * times);
                     AbstractDungeon.cardRewardScreen.discoveryCard = null;
@@ -98,13 +98,13 @@ public class DiscoveryHealAction extends AbstractGameAction {
     private ArrayList<AbstractCard> generateColorlessCardChoices() {
         ArrayList derp = new ArrayList();
 
-        while(derp.size() != 3) {
+        while (derp.size() != 3) {
             boolean dupe = false;
             AbstractCard tmp = AbstractDungeon.returnTrulyRandomColorlessCardInCombat();
             Iterator var4 = derp.iterator();
 
-            while(var4.hasNext()) {
-                AbstractCard c = (AbstractCard)var4.next();
+            while (var4.hasNext()) {
+                AbstractCard c = (AbstractCard) var4.next();
                 if (c.cardID.equals(tmp.cardID)) {
                     dupe = true;
                     break;
@@ -122,7 +122,7 @@ public class DiscoveryHealAction extends AbstractGameAction {
     private ArrayList<AbstractCard> generateCardChoices(CardType type) {
         ArrayList derp = new ArrayList();
 
-        while(derp.size() != 3) {
+        while (derp.size() != 3) {
             boolean dupe = false;
             AbstractCard tmp = null;
             if (type == null) {
@@ -133,8 +133,8 @@ public class DiscoveryHealAction extends AbstractGameAction {
 
             Iterator var5 = derp.iterator();
 
-            while(var5.hasNext()) {
-                AbstractCard c = (AbstractCard)var5.next();
+            while (var5.hasNext()) {
+                AbstractCard c = (AbstractCard) var5.next();
                 if (c.cardID.equals(tmp.cardID)) {
                     dupe = true;
                     break;

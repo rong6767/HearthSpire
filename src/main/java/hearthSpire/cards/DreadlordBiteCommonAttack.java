@@ -52,13 +52,12 @@ public class DreadlordBiteCommonAttack extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if(p.hand.getBottomCard() == this || p.hand.getTopCard() == this ){
+        if (p.hand.getBottomCard() == this || p.hand.getTopCard() == this) {
             this.addToBot(
                     new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
                             AbstractGameAction.AttackEffect.BLUNT_LIGHT));
             this.addToBot(new DamageAllEnemiesAction(p, magicNumber, this.damageTypeForTurn, AttackEffect.NONE));
-        }
-        else{
+        } else {
             this.addToBot(
                     new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
                             AbstractGameAction.AttackEffect.BLUNT_LIGHT));

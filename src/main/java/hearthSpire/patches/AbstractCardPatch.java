@@ -13,11 +13,11 @@ import hearthSpire.DefaultMod;
 )
 public class AbstractCardPatch {
     public static final String POWER_ID = DefaultMod.makeID("FreeCardPower");
+
     public static SpireReturn<Boolean> Prefix() {
         if (AbstractDungeon.player != null && AbstractDungeon.currMapNode != null && AbstractDungeon.getCurrRoom().phase == RoomPhase.COMBAT && AbstractDungeon.player.hasPower(POWER_ID)) {
             return SpireReturn.Return(true);
-        }
-        else {
+        } else {
             return SpireReturn.Continue();
         }
     }

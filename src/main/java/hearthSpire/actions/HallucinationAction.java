@@ -35,7 +35,7 @@ public class HallucinationAction extends AbstractGameAction {
                     if (this.upgraded) {
                         disCard.upgrade();
                     }
-                    if(AbstractDungeon.player.hasRelic(DefaultMod.makeID("StickyFingerRelic"))) {
+                    if (AbstractDungeon.player.hasRelic(DefaultMod.makeID("StickyFingerRelic"))) {
                         if (disCard.cost >= 1 && disCard.color != AbstractDungeon.player.getCardColor()) {
                             int newCost = disCard.cost - 1;
                             if (disCard.cost != newCost) {
