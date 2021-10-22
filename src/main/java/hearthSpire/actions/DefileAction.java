@@ -48,7 +48,7 @@ public class DefileAction extends AbstractGameAction {
                 logger.info("Defile: I found it!");
                 defile();
             }
-            if (m.currentBlock == 0 && m.currentHealth % 10 == 0) {
+            if (m.currentBlock == 0 && m.currentHealth % 10 == 0 && m.currentHealth != 0) {
                 logger.info("Defile: I found it!");
                 defile();
             }

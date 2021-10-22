@@ -37,5 +37,12 @@
     "DESCRIPTIONS": [
       "Cards that you #yStole from other classes cost 1 less."
     ]
+  },
+  "hearthSpire:BookofWondersRelic": {
+    "NAME": "Book of Wonders",
+    "FLAVOR": " Book of Wonders.",
+    "DESCRIPTIONS": [
+      "At the beginning of combat, shuffle 10 Scrolls of Wonder into your draw pile."
+    ]
   }
 }

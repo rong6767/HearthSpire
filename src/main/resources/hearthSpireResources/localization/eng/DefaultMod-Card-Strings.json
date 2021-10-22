@@ -157,6 +157,12 @@
     "NAME": "Ironclad's Scheme",
     "DESCRIPTION": " Retain . NL gain !M! strength, when retained, gain 1 more strength.",
     "UPGRADE_DESCRIPTION": " Retain . NL gain !M! strength, when retained, gain 1 more strength."
+  },
+  "hearthSpire:ScrollofWonderCard": {
+    "NAME": "Scroll of Wonder",
+    "DESCRIPTION": "  Unplayable . NL Casts When Drawn Cast a random card.",
+    "UPGRADE_DESCRIPTION": "  Unplayable . NL Casts When Drawn Cast a upgraded random card."
   }
+
 
 }

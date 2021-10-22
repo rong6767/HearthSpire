@@ -17,6 +17,7 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import hearthSpire.cards.AbstractDefaultCard;
+import hearthSpire.relics.BookofWondersRelic;
 import hearthSpire.relics.StickyFingerRelic;
 import hearthSpire.util.IDCheckDontTouchPls;
 import hearthSpire.util.TextureLoader;
@@ -381,6 +382,8 @@ public class DefaultMod implements
         logger.info("Adding relics");
         BaseMod.addRelic(new StickyFingerRelic(), RelicType.GREEN);
         UnlockTracker.markRelicAsSeen(StickyFingerRelic.ID);
+        BaseMod.addRelic(new BookofWondersRelic(), RelicType.SHARED);
+        UnlockTracker.markRelicAsSeen(BookofWondersRelic.ID);
 
 
    /*     logger.info("Adding relics");
