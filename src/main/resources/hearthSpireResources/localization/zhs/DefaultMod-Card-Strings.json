@@ -152,5 +152,10 @@
     "NAME": "亵渎",
     "DESCRIPTION": "对所有敌人造成 5 点伤害, 如果有敌人生命或护甲以0结尾, 则再次施放亵渎. 消耗 .",
     "UPGRADE_DESCRIPTION": " 对所有敌人造成 5 点伤害, 如果有敌人生命或护甲以0结尾, 则再次施放亵渎."
+  },
+  "hearthSpire:IroncladsSchemeCommonPower": {
+    "NAME": "铁甲战士的阴谋",
+    "DESCRIPTION": " 保留 . NL 获得 !M! 力量，每当保留时，多增加1点力量.",
+    "UPGRADE_DESCRIPTION": " 保留 . NL 获得 !M! 力量，每当保留时，多增加1点力量."
   }
 }

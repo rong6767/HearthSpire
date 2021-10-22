@@ -152,5 +152,11 @@
     "NAME": "Defile",
     "DESCRIPTION": "Deal 5 damage to all enemies. If any enemy's health or block end with 0, cast this again. Exhaust.",
     "UPGRADE_DESCRIPTION": " Deal 5 damage to all enemies. If any enemy's health or block end with 0, cast this again."
+  },
+  "hearthSpire:IroncladsSchemeCommonPower": {
+    "NAME": "Ironclad's Scheme",
+    "DESCRIPTION": " Retain . NL gain !M! strength, when retained, gain 1 more strength.",
+    "UPGRADE_DESCRIPTION": " Retain . NL gain !M! strength, when retained, gain 1 more strength."
   }
+
 }
