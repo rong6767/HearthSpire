@@ -20,6 +20,7 @@ public class DefileAction extends AbstractGameAction {
         this.amt = amt;
     }
 
+
     public void defile() {
         MonsterGroup monsters = AbstractDungeon.getCurrRoom().monsters;
         monsters.update();
@@ -37,27 +38,35 @@ public class DefileAction extends AbstractGameAction {
                     ((AbstractMonster) AbstractDungeon.getCurrRoom().monsters.monsters.get(i)).tint.color.set(Color.RED);
                     ((AbstractMonster) AbstractDungeon.getCurrRoom().monsters.monsters.get(i)).tint.changeColor(Color.WHITE.cpy());
                 }
-
-                ((AbstractMonster) AbstractDungeon.getCurrRoom().monsters.monsters.get(i)).damage(new DamageInfo(this.source, amt, this.damageType));
-            }
+                if(AbstractDungeon.getCurrRoom().monsters.monsters.get(i).currentHealth-amt <= 0) {
+                    ((AbstractMonster) AbstractDungeon.getCurrRoom().monsters.monsters.get(i)).damage(new DamageInfo(this.source, amt, this.damageType));
+                    defile();
+                }
+                else{
+                    ((AbstractMonster) AbstractDungeon.getCurrRoom().monsters.monsters.get(i)).damage(new DamageInfo(this.source, amt, this.damageType));
+                }
+                }
         }
         for (int i = 0; i < size; i++) {
             AbstractMonster m = monsters.monsters.get(i);
             logger.info(m.currentHealth);
             if (m.currentBlock != 0 && m.currentBlock % 10 == 0) {
                 logger.info("Defile: I found it!");
+
                 defile();
             }
             if (m.currentBlock == 0 && m.currentHealth % 10 == 0 && m.currentHealth != 0) {
                 logger.info("Defile: I found it!");
+
                 defile();
             }
-        }
 
+        }
 
     }
 
     public void update() {
+
         defile();
 
         this.isDone = true;

@@ -162,5 +162,17 @@
     "NAME": "惊奇卡牌",
     "DESCRIPTION": " 不能被打出 . 抽到时释放, 打出一张随机卡牌.",
     "UPGRADE_DESCRIPTION": "  不能被打出 . 抽到时释放, 打出一张随机的升级后的卡牌."
+  },
+  "hearthSpire:WatchersSchemeCommonAttack": {
+    "NAME": "观者的阴谋",
+    "DESCRIPTION": " 保留 . NL 对所有敌人造成 !D! 点伤害，每当保留时，多造成4点伤害. 消耗 ."
+  },
+  "hearthSpire:DefectsSchemeCommonSkill": {
+    "NAME": "故障机器人的阴谋",
+    "DESCRIPTION": " 保留 . NL   激发  你最右边的球 !M! 次， NL 每当保留时，多激发1次. 消耗 ."
+  },
+  "hearthSpire:SilentsSchemeCommonSkill": {
+    "NAME": "静默猎手的阴谋",
+    "DESCRIPTION": " 保留 . NL 选择一张牌，将 !M! 份复制放入弃牌堆，每当保留时，多复制1张. 消耗 ."
   }
 }

@@ -1,5 +1,6 @@
 package hearthSpire.cards;
 
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hearthSpire.DefaultMod;
@@ -39,6 +40,7 @@ public class OverflowUncommonSkill extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new HealAllAction(p, p, magicNumber));
+        this.addToBot(new DrawCardAction(magicNumber));
     }
 
     // Upgraded stats.

@@ -162,7 +162,20 @@
     "NAME": "Scroll of Wonder",
     "DESCRIPTION": "  Unplayable . NL Casts When Drawn Cast a random card.",
     "UPGRADE_DESCRIPTION": "  Unplayable . NL Casts When Drawn Cast a upgraded random card."
+  },
+  "hearthSpire:WatchersSchemeCommonAttack": {
+    "NAME": "Watcher's Scheme",
+    "DESCRIPTION": " Retain . NL Deal !D! damage to all enemies, when retained, deal 4 more damage. Exhaust."
+  },
+  "hearthSpire:DefectsSchemeCommonSkill": {
+    "NAME": "Defect's Scheme",
+    "DESCRIPTION": " Retain . NL Evoke your next orb !M! time, when retained, evoke 1 more time. Exhaust."
+  },
+  "hearthSpire:SilentsSchemeCommonSkill": {
+    "NAME": "Silent's Scheme",
+    "DESCRIPTION": " Retain . NL Choose a card. add !M! copies of that card into discard, when retained, add 1 more copy. Exhaust."
   }
+
 
 
 }
