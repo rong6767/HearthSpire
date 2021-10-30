@@ -60,7 +60,7 @@
   },
   "hearthSpire:PuzzleBoxofYoggSaronRareSkill": {
     "NAME": "尤格萨隆的谜之匣",
-    "DESCRIPTION": "随即释放 !M! 张牌. NL 消耗 "
+    "DESCRIPTION": "随机释放 !M! 张牌. NL 消耗 "
   },
   "hearthSpire:DreadlordBiteCommonAttack": {
     "NAME": "恐惧魔王之咬",
@@ -101,7 +101,7 @@
   },
   "hearthSpire:RenoJacksonUncommonSkill": {
     "NAME": "雷诺·杰克逊",
-    "DESCRIPTION": "回复 4 点生命. 如果你的牌组没有相同的牌(除基础卡牌外), 回复额外的 !M! 点生命."
+    "DESCRIPTION": "回复 4 点生命. 如果你的牌组没有相同的牌(除基础卡牌外), 回复额外的 !M! 点生命. NL 消耗."
   },
   "hearthSpire:DinotamerBrannUncommonAttack": {
     "NAME": "恐龙大师布莱恩",
@@ -165,7 +165,7 @@
   },
   "hearthSpire:WatchersSchemeCommonAttack": {
     "NAME": "观者的阴谋",
-    "DESCRIPTION": " 保留 . NL 对所有敌人造成 !D! 点伤害，每当保留时，多造成4点伤害. 消耗 ."
+    "DESCRIPTION": " 保留 . NL 对所有敌人造成 !D! 点伤害，每当保留时，多造成4点伤害."
   },
   "hearthSpire:DefectsSchemeCommonSkill": {
     "NAME": "故障机器人的阴谋",

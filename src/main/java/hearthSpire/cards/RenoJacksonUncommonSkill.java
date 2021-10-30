@@ -36,6 +36,7 @@ public class RenoJacksonUncommonSkill extends AbstractDynamicCard {
     public RenoJacksonUncommonSkill() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = 8;
+        this.exhaust = true;
     }
 
     // Actions the card should do.

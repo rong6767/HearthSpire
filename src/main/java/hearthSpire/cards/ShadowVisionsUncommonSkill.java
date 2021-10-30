@@ -27,7 +27,7 @@ public class ShadowVisionsUncommonSkill extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = CardColor.PURPLE;
 
-    private static final int COST = 1;
+    private static final int COST = 0;
     private static boolean UPGRADED = false;
 
     // /STAT DECLARATION/
