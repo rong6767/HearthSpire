@@ -34,8 +34,20 @@ public class PlayRandomCardsAction extends AbstractGameAction {
     }
 
     private AbstractCard.CardRarity randomRarity() {
-        int pick = new Random().nextInt(5);
-        return AbstractCard.CardRarity.values()[pick];
+        int pick = new Random().nextInt(100);
+        if(pick>=0 && pick <= 50){
+            return AbstractCard.CardRarity.COMMON;
+        }
+        else if(pick >50 && pick <= 80){
+            return AbstractCard.CardRarity.UNCOMMON;
+        }
+        else if(pick >80 && pick <= 95){
+            return AbstractCard.CardRarity.RARE;
+        }
+        else if(pick > 95 && pick <= 99){
+            return AbstractCard.CardRarity.BASIC;
+        }
+        return AbstractCard.CardRarity.BASIC;
     }
 
     public static AbstractCard getAnyColorCard(AbstractCard.CardRarity rarity) {

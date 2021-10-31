@@ -25,7 +25,7 @@ public class BookofWondersRelic extends CustomRelic {
 
     public void atPreBattle() {
         this.flash();
-        this.addToBot(new MakeTempCardInDrawPileAction(new ScrollofWonderCard(),10, true, true, false));
+        this.addToBot(new MakeTempCardInDrawPileAction(new ScrollofWonderCard(),8, true, true, false));
     }
 
 

@@ -46,8 +46,20 @@ public class AcademicEspionageUncommonSkill extends AbstractDynamicCard {
     }
 
     private AbstractCard.CardRarity randomRarity() {
-        int pick = new Random().nextInt(5);
-        return AbstractCard.CardRarity.values()[pick];
+        int pick = new Random().nextInt(100);
+        if(pick>=0 && pick <= 50){
+            return AbstractCard.CardRarity.COMMON;
+        }
+        else if(pick >50 && pick <= 80){
+            return AbstractCard.CardRarity.UNCOMMON;
+        }
+        else if(pick >80 && pick <= 95){
+            return AbstractCard.CardRarity.RARE;
+        }
+        else if(pick > 95 && pick <= 99){
+            return AbstractCard.CardRarity.BASIC;
+        }
+        return AbstractCard.CardRarity.BASIC;
     }
 
     public static AbstractCard getAnyColorCard(AbstractCard.CardRarity rarity) {
@@ -60,17 +72,17 @@ public class AcademicEspionageUncommonSkill extends AbstractDynamicCard {
             do {
                 do {
                     do {
-                        do {
                             do {
-                                if (!var2.hasNext()) {
-                                    anyCard.shuffle(AbstractDungeon.cardRng);
-                                    return anyCard.getRandomCard(true, rarity).makeCopy();
-                                }
+                                do {
+                                    if (!var2.hasNext()) {
+                                        anyCard.shuffle(AbstractDungeon.cardRng);
+                                        return anyCard.getRandomCard(true, rarity).makeCopy();
+                                    }
 
-                                c = (Map.Entry) var2.next();
-                            } while (((AbstractCard) c.getValue()).color == color);
-                        } while (((AbstractCard) c.getValue()).rarity != rarity);
-                    } while (((AbstractCard) c.getValue()).type == AbstractCard.CardType.CURSE);
+                                    c = (Map.Entry) var2.next();
+                                } while (((AbstractCard) c.getValue()).color == color);
+                            } while (((AbstractCard) c.getValue()).rarity != rarity);
+                        } while (((AbstractCard) c.getValue()).type == AbstractCard.CardType.CURSE);
                 } while (((AbstractCard) c.getValue()).type == AbstractCard.CardType.STATUS);
             } while (UnlockTracker.isCardLocked((String) c.getKey()) && !Settings.treatEverythingAsUnlocked());
 

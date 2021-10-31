@@ -101,7 +101,7 @@
   },
   "hearthSpire:RenoJacksonUncommonSkill": {
     "NAME": "Reno Jackson",
-    "DESCRIPTION": "Restore 4 health. If your deck has no duplicates (except basic cards), restore another !M! health."
+    "DESCRIPTION": "Restore 4 health. If your deck has no duplicates (except basic cards), restore another !M! health. NL Exhaust."
   },
   "hearthSpire:DinotamerBrannUncommonAttack": {
     "NAME": "Dinotammer Brann",

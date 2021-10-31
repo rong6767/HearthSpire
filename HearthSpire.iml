@@ -16,10 +16,7 @@
           <root url="jar://D:/SteamLibrary/steamapps/common/SlayTheSpire/desktop-1.0.jar!/" />
         </CLASSES>
         <JAVADOC />
-        <SOURCES>
-          <root url="jar://D:/SteamLibrary/steamapps/common/SlayTheSpire/desktop-1.0.jar!/" />
-          <root url="jar://D:/SteamLibrary/steamapps/common/SlayTheSpire/desktop-1.0.jar!/" />
-        </SOURCES>
+        <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
