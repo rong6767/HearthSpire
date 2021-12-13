@@ -174,5 +174,33 @@
   "hearthSpire:SilentsSchemeCommonSkill": {
     "NAME": "静默猎手的阴谋",
     "DESCRIPTION": " 保留 . NL 选择一张牌，将 !M! 份复制放入弃牌堆，每当保留时，多复制1张. 消耗 ."
+  },
+  "hearthSpire:SeekGuidanceRarePower": {
+    "NAME": "寻求指引",
+    "DESCRIPTION": " 固有 . 任务线：打出3张消耗为1的卡牌，奖励：从抽牌堆中选择1张牌放入你的手牌."
+  },
+  "hearthSpire:XyrellatheSanctifiedRareSkill": {
+    "NAME": "圣徒泽瑞拉",
+    "DESCRIPTION": "将净化的碎片洗入你的弃牌堆."
+  },
+  "hearthSpire:PurifiedShardRareSkill": {
+    "NAME": "净化的碎片",
+    "DESCRIPTION": "消灭所有敌人."
+  },
+  "hearthSpire:TheDemonSeedRarePower": {
+    "NAME": "恶魔之种",
+    "DESCRIPTION": " 固有 . 任务线：在你的回合中受到8点伤害，奖励：对敌方英雄造成 8 点伤害, 回复 8 点生命."
+  },
+  "hearthSpire:BlightbornTamsinRarePower": {
+    "NAME": "枯萎化身塔姆辛",
+    "DESCRIPTION": "在本局对战的剩余时间内，你在你的回合受到的伤害改为对你的敌人造成三倍伤害. "
+  },
+  "hearthSpire:SorcerersGambitRarePower": {
+    "NAME": "巫师的计策",
+    "DESCRIPTION": " 固有 . 任务线: 生成1个 闪电 ， 冰霜 ， 等离子 ， 黑暗 充能球. 奖励：抽一张技能牌."
+  },
+  "hearthSpire:ArcanistDawngraspRarePower": {
+    "NAME": "奥术师晨拥",
+    "DESCRIPTION": "获得5点 集中 ."
   }
 }

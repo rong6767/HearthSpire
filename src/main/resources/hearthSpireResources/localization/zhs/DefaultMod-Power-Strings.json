@@ -13,6 +13,46 @@
   },
   "hearthSpire:SpectralCutlassPower": {
     "NAME": "幽灵弯刀",
-    "DESCRIPTIONS": ["每当你打出一张其他颜色的牌，获得2护甲."]
+    "DESCRIPTIONS": ["每当你打出一张其他颜色的牌，获得","护甲."]
+  },
+  "hearthSpire:SeekGuidancePower": {
+    "NAME": "寻求指引",
+    "DESCRIPTIONS": ["任务线：打出3张消耗为1的卡牌，奖励：从抽牌堆中选择1张牌放入你的手牌."]
+  },
+  "hearthSpire:DiscovertheVoidShardPower": {
+    "NAME": "发现虚空碎片",
+    "DESCRIPTIONS": ["任务线：打出2张消耗为2的卡牌，奖励：从抽牌堆中选择1张牌放入你的手牌."]
+  },
+  "hearthSpire:IlluminatetheVoidPower": {
+    "NAME": "照亮虚空",
+    "DESCRIPTIONS": ["任务线：打出1张消耗为3的卡牌，奖励：将圣徒泽瑞拉洗进抽牌堆."]
+  },
+  "hearthSpire:TheDemonSeedPower": {
+    "NAME": "恶魔之种",
+    "DESCRIPTIONS": ["任务线：在你的回合中受到8点伤害，奖励：对敌方英雄造成 8 点伤害, 回复 8 点生命."]
+  },
+  "hearthSpire:EstablishtheLinkPower": {
+    "NAME": "建立连接",
+    "DESCRIPTIONS": ["任务线：在你的回合中受到8点伤害，奖励：对敌方英雄造成 8 点伤害, 回复 8 点生命."]
+  },
+  "hearthSpire:CompletetheRitualPower": {
+    "NAME": "完成仪式",
+    "DESCRIPTIONS": ["任务线：在你的回合中受到8点伤害，奖励：将枯萎化身塔姆辛洗进抽牌堆."]
+  },
+  "hearthSpire:BlightbornTamsinPower": {
+    "NAME": "枯萎化身塔姆辛",
+    "DESCRIPTIONS": ["在本局对战的剩余时间内，你在你的回合受到的伤害改为对你的敌人造成三倍伤害."]
+  },
+  "hearthSpire:SorcerersGambitPower": {
+    "NAME": "巫师的计策",
+    "DESCRIPTIONS": ["任务线: 生成1个 闪电 ， 冰霜 ， 等离子 ， 黑暗 充能球. 奖励：抽一张技能牌."]
+  },
+  "hearthSpire:StallforTimePower": {
+    "NAME": "拖延时间",
+    "DESCRIPTIONS": ["任务线: 生成1个 闪电 ， 冰霜 ， 等离子 ， 黑暗 充能球. 奖励：抽一张技能牌.获得1点 集中 "]
+  },
+  "hearthSpire:ReachthePortalRoomPower": {
+    "NAME": "抵达传送大厅",
+    "DESCRIPTIONS": ["任务线: 生成1个 闪电 ， 冰霜 ， 等离子 ， 黑暗 充能球. 奖励：将奥术师晨拥洗进抽牌堆."]
   }
 }

@@ -46,7 +46,7 @@ public class DreadlordBiteCommonAttack extends AbstractDynamicCard {
     public DreadlordBiteCommonAttack() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
-        magicNumber = baseMagicNumber = ALL_DAMAGE;
+        magicNumber = baseMagicNumber = baseDamage - 5;
     }
 
     // Actions the card should do.
@@ -56,7 +56,8 @@ public class DreadlordBiteCommonAttack extends AbstractDynamicCard {
             this.addToBot(
                     new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
                             AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-            this.addToBot(new DamageAllEnemiesAction(p, magicNumber, this.damageTypeForTurn, AttackEffect.NONE));
+            DefaultMod.logger.info("magic number is :" + magicNumber);
+            this.addToBot(new DamageAllEnemiesAction(p, magicNumber, damageTypeForTurn , AttackEffect.NONE));
         } else {
             this.addToBot(
                     new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),

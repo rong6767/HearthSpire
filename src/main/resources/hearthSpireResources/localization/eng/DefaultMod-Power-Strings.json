@@ -13,6 +13,46 @@
 },
   "hearthSpire:SpectralCutlassPower": {
     "NAME": "Spectral Cutlass",
-    "DESCRIPTIONS": ["Whenever you play a card from other colors, gain 2 Block."]
+    "DESCRIPTIONS": ["Whenever you play a card from other colors, gain"," Block."]
+  },
+  "hearthSpire:SeekGuidancePower": {
+    "NAME": "Seek Guidance",
+    "DESCRIPTIONS": ["QuestLine: Play 3 1-Cost cards. Reward: Choose a card from your draw pile and place it into your hand."]
+  },
+  "hearthSpire:DiscovertheVoidShardPower": {
+    "NAME": "Discover the Void Shard",
+    "DESCRIPTIONS": ["QuestLine: Play 2 2-Cost cards. Reward: Choose a card from your draw pile and place it into your hand."]
+  },
+  "hearthSpire:IlluminatetheVoidPower": {
+    "NAME": "Illuminate the Void",
+    "DESCRIPTIONS": ["QuestLine: Play 1 3-Cost cards. Reward: Shuffle Xyrella, the Sanctified into your draw pile."]
+  },
+  "hearthSpire:TheDemonSeedPower": {
+    "NAME": "The Demon Seed",
+    "DESCRIPTIONS": ["Questline: Take 8 damage on your turns. Reward: Deal 8 damage to the enemies. Restore 8 health."]
+  },
+  "hearthSpire:EstablishtheLinkPower": {
+    "NAME": "Establish the Link",
+    "DESCRIPTIONS": ["Questline: Take 8 damage on your turns. Reward: Deal 8 damage to the enemies. Restore 8 health."]
+  },
+  "hearthSpire:CompletetheRitualPower": {
+    "NAME": "Complete the Ritual",
+    "DESCRIPTIONS": ["Questline: Take 8 damage on your turns. Reward: Shuffle Blightborn Tamsin into your draw pile."]
+  },
+  "hearthSpire:BlightbornTamsinPower": {
+    "NAME": "Blightborn Tamsin",
+    "DESCRIPTIONS": ["For the rest of the combat, 3 times of damage you take from your cards damages your enemies instead."]
+  },
+  "hearthSpire:SorcerersGambitPower": {
+    "NAME": "Sorcerer's Gambit",
+    "DESCRIPTIONS": ["QuestLine: Channel 1 Lightning, 1 Frost, 1 Plasma and 1 Dark. Reward: Draw a Skill."]
+  },
+  "hearthSpire:StallforTimePower": {
+    "NAME": "Stall for Time",
+    "DESCRIPTIONS": ["QuestLine: Channel 1 Lightning, 1 Frost, 1 Plasma and 1 Dark. Reward: Draw a Skill,gain 1 focus ."]
+  },
+  "hearthSpire:ReachthePortalRoomPower": {
+    "NAME": "Reach the Portal Room",
+    "DESCRIPTIONS": ["QuestLine: Channel 1 Lightning, 1 Frost, 1 Plasma and 1 Dark. Reward: Shuffle Arcanist Dawngrasp into your draw pile."]
   }
 }

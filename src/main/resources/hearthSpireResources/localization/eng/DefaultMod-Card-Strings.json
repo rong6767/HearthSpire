@@ -174,7 +174,37 @@
   "hearthSpire:SilentsSchemeCommonSkill": {
     "NAME": "Silent's Scheme",
     "DESCRIPTION": " Retain . NL Choose a card. add !M! copies of that card into discard, when retained, add 1 more copy. Exhaust."
+  },
+  "hearthSpire:SeekGuidanceRarePower": {
+    "NAME": "Seek Guidance",
+    "DESCRIPTION": " Innate . QuestLine: Play 3 1-Cost cards. Reward: Choose a card from your draw pile and place it into your hand."
+  },
+  "hearthSpire:XyrellatheSanctifiedRareSkill": {
+    "NAME": "Xyrella, the Sanctified",
+    "DESCRIPTION": "Shuffle the Purified Shard into your discard pile."
+  },
+  "hearthSpire:PurifiedShardRareSkill": {
+    "NAME": "Purified Shard",
+    "DESCRIPTION": "Destroy all enemy."
+  },
+  "hearthSpire:TheDemonSeedRarePower": {
+    "NAME": "The Demon Seed",
+    "DESCRIPTION": " Innate .Questline: Take 8 damage on your turns. Reward: Deal 8 damage to the enemies. Restore 8 health. "
+  },
+  "hearthSpire:BlightbornTamsinRarePower": {
+    "NAME": "Blightborn Tamsin",
+    "DESCRIPTION": "For the rest of the combat, 3 times of damage you take from your cards damages your enemies 10 times instead. "
+  },
+  "hearthSpire:SorcerersGambitRarePower": {
+    "NAME": "Sorcerer's Gambit",
+    "DESCRIPTION": " Innate . QuestLine: Channel 1 Lightning, 1 Frost, 1 Plasma and 1 Dark. Reward: Draw a Skill."
+  },
+  "hearthSpire:ArcanistDawngraspRarePower": {
+    "NAME": "Arcanist Dawngrasp",
+    "DESCRIPTION": "Gain 5 focus ."
   }
+
+
 
 
 
