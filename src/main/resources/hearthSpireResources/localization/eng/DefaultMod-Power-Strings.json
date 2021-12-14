@@ -54,5 +54,21 @@
   "hearthSpire:ReachthePortalRoomPower": {
     "NAME": "Reach the Portal Room",
     "DESCRIPTIONS": ["QuestLine: Channel 1 Lightning, 1 Frost, 1 Plasma and 1 Dark. Reward: Shuffle Arcanist Dawngrasp into your draw pile."]
+  },
+  "hearthSpire:FinalShowdownPower": {
+    "NAME": "Final Show",
+    "DESCRIPTIONS": ["QuestLine: Draw 6 cards in one turn. Reward: Reduce the Cost of the cards in your hand by 1."]
+  },
+  "hearthSpire:GainMomentumPower": {
+    "NAME": "Gain Momentum",
+    "DESCRIPTIONS": ["QuestLine: Draw 7 cards in one turn. Reward: Reduce the Cost of the cards in your hand by 1."]
+  },
+  "hearthSpire:ClosethePortalPower": {
+    "NAME": "Close the Portal",
+    "DESCRIPTIONS": ["QuestLine: Draw 7 cards in one turn. Reward: Shuffle Demonslayer Kurtrus into your draw pile."]
+  },
+  "hearthSpire:DemonslayerKurtrusPower": {
+    "NAME": "Demonslayer Kurtrus",
+    "DESCRIPTIONS": ["Reduce the Cost of the cards drawn by 2."]
   }
 }

@@ -202,10 +202,13 @@
   "hearthSpire:ArcanistDawngraspRarePower": {
     "NAME": "Arcanist Dawngrasp",
     "DESCRIPTION": "Gain 5 focus ."
+  },
+  "hearthSpire:FinalShowdownRarePower": {
+    "NAME": "Final Show",
+    "DESCRIPTION": " Innate . QuestLine: Draw 6 cards in one turn. Reward: Reduce the Cost of the cards in your hand by 1."
+  },
+  "hearthSpire:DemonslayerKurtrusSpecialPower": {
+    "NAME": "Demonslayer Kurtrusr",
+    "DESCRIPTION": "Reduce the Cost of the cards drawn by 2."
   }
-
-
-
-
-
 }

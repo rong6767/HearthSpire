@@ -54,5 +54,22 @@
   "hearthSpire:ReachthePortalRoomPower": {
     "NAME": "抵达传送大厅",
     "DESCRIPTIONS": ["任务线: 生成1个 闪电 ， 冰霜 ， 等离子 ， 黑暗 充能球. 奖励：将奥术师晨拥洗进抽牌堆."]
+  },
+  "hearthSpire:FinalShowdownPower": {
+    "NAME": "一决胜负",
+    "DESCRIPTIONS": ["任务线：在一回合中抽 6 张牌。奖励：使手牌消耗减少 1 点."]
+  },
+  "hearthSpire:GainMomentumPower": {
+    "NAME": "汲取动力",
+    "DESCRIPTIONS": ["任务线：在一回合中抽 7 张牌。奖励：使手牌消耗减少 1 点."]
+  },
+  "hearthSpire:ClosethePortalPower": {
+    "NAME": "关闭传送门",
+    "DESCRIPTIONS": ["任务线：在一回合中抽 7 张牌。奖励：将屠魔者库尔特鲁斯洗进抽牌堆."]
+  },
+  "hearthSpire:DemonslayerKurtrusPower": {
+    "NAME": "屠魔者库尔特鲁斯",
+    "DESCRIPTIONS": ["你抽到的牌法力值消耗减少 2 点."]
   }
+
 }

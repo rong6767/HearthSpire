@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hearthSpire.DefaultMod;
-import hearthSpire.powers.SeekGuidancePower;
+import hearthSpire.powers.FinalShowdownPower;
 
 import static hearthSpire.DefaultMod.makeCardPath;
 
@@ -15,7 +15,7 @@ public class FinalShowdownRarePower extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = DefaultMod.makeID(SeekGuidanceRarePower.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(FinalShowdownRarePower.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
     public static final String IMG = makeCardPath("FinalShowdown.png");
