@@ -193,7 +193,7 @@
   },
   "hearthSpire:BlightbornTamsinRarePower": {
     "NAME": "Blightborn Tamsin",
-    "DESCRIPTION": "For the rest of the combat, 3 times of damage you take from your cards damages your enemies 10 times instead. "
+    "DESCRIPTION": "For the rest of the combat, 3 times of damage you take from your cards damages your enemies instead. "
   },
   "hearthSpire:SorcerersGambitRarePower": {
     "NAME": "Sorcerer's Gambit",
@@ -210,5 +210,42 @@
   "hearthSpire:DemonslayerKurtrusSpecialPower": {
     "NAME": "Demonslayer Kurtrusr",
     "DESCRIPTION": "Reduce the Cost of the cards drawn by 2."
+  },
+  "hearthSpire:DeathGripSpecialSkill": {
+    "NAME": "Death Grip",
+    "DESCRIPTION": " Ethereal .Add 1 of 3 random Attack cards to your hand, it costs 0 this turn. Exhaust ."
+  },
+  "hearthSpire:ObliterateSpecialSkill": {
+    "NAME": "Obliterate",
+    "DESCRIPTION": " Ethereal .Your hero takes damage equal to half of its Health. Exhaust ."
+  },
+  "hearthSpire:DeathCoilSpecialAttack": {
+    "NAME": "Death Coil",
+    "DESCRIPTION": " Ethereal .Deal 5 damage to an enemy, and restore 5 Health to your hero. Exhaust ."
+  },
+  "hearthSpire:DeathAndDecaySpecialAttack": {
+    "NAME": "Death and Decay",
+    "DESCRIPTION": " Ethereal .Deal 10 damage to all enemies. Exhaust ."
+  },
+  "hearthSpire:AntiMagicShellSpecialSkill": {
+    "NAME": "Anti-Magic Shell",
+    "DESCRIPTION": " Ethereal .Gain 1 Intangible. Exhaust ."
+  },
+  "hearthSpire:DoomPactSpecialAttack": {
+    "NAME": "Doom Pact",
+    "DESCRIPTION": " Ethereal . Exhaust all your draw pile, deal 5 damage for each exhausted card. Exhaust ."
+  },
+  "hearthSpire:ArmyOfTheDeadSpecialSkill": {
+    "NAME": "Army of the Dead",
+    "DESCRIPTION": " Ethereal . Play the top 5 cards of your draw pile. Exhaust ."
+  },
+  "hearthSpire:FrostmourneSpecialPower": {
+    "NAME": "Frostmourne",
+    "DESCRIPTION": " Ethereal . Last 3 turns, replay every card you have played these turns. Exhaust ."
+  },
+  "hearthSpire:TheLichKingRarePower": {
+    "NAME": "The Lich King",
+    "DESCRIPTION": "At the start of your turn, add 1 random Death Knight card to your hand.",
+    "UPGRADE_DESCRIPTION": " Innate . At the start of your turn, add 1 random Death Knight card to your hand."
   }
 }

@@ -70,6 +70,14 @@
   "hearthSpire:DemonslayerKurtrusPower": {
     "NAME": "屠魔者库尔特鲁斯",
     "DESCRIPTIONS": ["你抽到的牌法力值消耗减少 2 点."]
+  },
+  "hearthSpire:FrostmournePower": {
+    "NAME": "霜之哀伤",
+    "DESCRIPTIONS": ["持续三个回合,重新打出本回合中使用的卡牌"]
+  },
+  "hearthSpire:TheLichKingPower": {
+    "NAME": "巫妖王",
+    "DESCRIPTIONS": ["在你回合开始时，随机将","张死亡骑士牌置入手牌中."]
   }
 
 }

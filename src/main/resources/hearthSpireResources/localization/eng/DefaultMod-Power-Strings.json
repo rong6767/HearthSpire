@@ -70,5 +70,13 @@
   "hearthSpire:DemonslayerKurtrusPower": {
     "NAME": "Demonslayer Kurtrus",
     "DESCRIPTIONS": ["Reduce the Cost of the cards drawn by 2."]
+  },
+  "hearthSpire:FrostmournePower": {
+    "NAME": "Frostmourne",
+    "DESCRIPTIONS": ["Last 3 turns, replay every card you have played these turns"]
+  },
+  "hearthSpire:TheLichKingPower": {
+    "NAME": "The Lich King",
+    "DESCRIPTIONS": ["At the start of your turn, add "," random Death Knight card to your hand."]
   }
 }

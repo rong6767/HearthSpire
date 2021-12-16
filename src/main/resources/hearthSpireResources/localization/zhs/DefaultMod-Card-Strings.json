@@ -210,5 +210,42 @@
   "hearthSpire:DemonslayerKurtrusSpecialPower": {
     "NAME": "屠魔者库尔特鲁斯",
     "DESCRIPTION": "你抽到的牌法力值消耗减少 2 点."
+  },
+  "hearthSpire:DeathGripSpecialSkill": {
+    "NAME": "死亡之握",
+    "DESCRIPTION": " 虚无 .从 3 张随机攻击牌中选择 1 张加入你的手牌。这张牌在本回合耗能变为 0 . 消耗 ."
+  },
+  "hearthSpire:ObliterateSpecialSkill": {
+    "NAME": "湮灭",
+    "DESCRIPTION": " 虚无 .消灭一个敌人，受到等同于该敌人生命值一半的伤害. 消耗 ."
+  },
+  "hearthSpire:DeathCoilSpecialAttack": {
+    "NAME": "凋零缠绕",
+    "DESCRIPTION": " 虚无 .对一个敌人造成 5 点伤害，并恢复 5 点生命值. 消耗 ."
+  },
+  "hearthSpire:DeathAndDecaySpecialAttack": {
+    "NAME": "死亡凋零",
+    "DESCRIPTION": " 虚无 .对所有敌人造成 10 点伤害. 消耗 ."
+  },
+  "hearthSpire:AntiMagicShellSpecialSkill": {
+    "NAME": "反魔法护罩",
+    "DESCRIPTION": " 虚无 .获得 1 层 无实体. 消耗 ."
+  },
+  "hearthSpire:DoomPactSpecialAttack": {
+    "NAME": "末日契约",
+    "DESCRIPTION": " 虚无 . 消耗你的抽牌堆中所有牌, 对所有敌人造成消耗牌数量 5 倍的伤害. 消耗 ."
+  },
+  "hearthSpire:ArmyOfTheDeadSpecialSkill": {
+    "NAME": "亡者大军",
+    "DESCRIPTION": " 虚无 . 打出抽牌堆顶部的 5 张牌. 消耗 ."
+  },
+  "hearthSpire:FrostmourneSpecialPower": {
+    "NAME": "霜之哀伤",
+    "DESCRIPTION": " 虚无 . 持续三个回合,重新打出本回合中使用的卡牌. 消耗 ."
+  },
+  "hearthSpire:TheLichKingRarePower": {
+    "NAME": "巫妖王",
+    "DESCRIPTION": "在你回合开始时，随机将 1 张死亡骑士牌置入手牌中.",
+    "UPGRADE_DESCRIPTION": " 固有 . 在你回合开始时，随机将 1 张死亡骑士牌置入手牌中."
   }
 }
